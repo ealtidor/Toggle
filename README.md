@@ -1,6 +1,6 @@
 #  Toggle README <!-- omit in toc -->
 
-- [Overview]
+- Overview
 The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to add all of their properties and tenants in one central location. Users can manage requests, comments, or questions from their tenants with one application, versus tracking down multiple emails and spending extra money.
 
 - [MVP](#mvp)
@@ -13,10 +13,12 @@ The purpose of this web application is to provide real estate investors a quick 
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
+- [Post-MVP]
   - Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
   - Landlords can respond by to tenant requests
-  - Landlords can keep track of monthly payments
+  - Landlords can keep track of monthly payments and expenses
+  - Property reminders for things such as maintenance, lease agreement, and rental vacancies.
+  
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
