@@ -30,8 +30,6 @@
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front-End |
@@ -44,8 +42,6 @@
 ### Client (Front End)
 
 #### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 ![Toggle Wireframe](https://www.figma.com/file/LkMoG9HFDxFZX4EB8KOpSx/Toggle?node-id=18%3A1)
 
@@ -85,8 +81,6 @@ src
 ```
 
 #### Time Estimates
-
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
