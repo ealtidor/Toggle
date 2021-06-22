@@ -4,16 +4,16 @@
 The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
 
 ## MVP
-- _Users can view property listings and tenants
-- _Track scheduled maintenance and leasing agreements
-- _Users can edit property listings and tenant profiles  
+- Users can view property listings and tenants
+- Track scheduled maintenance and leasing agreements
+- Users can edit property listings and tenant profiles  
 
 
 ## POST-MVP
-- _Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
-- _Landlords can respond by to tenant requests
-- _Landlords can keep track of monthly payments and expenses
-- _Property reminders for things such as maintenance, lease agreement, and rental vacancies.
+- Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
+- Landlords can respond by to tenant requests
+- Landlords can keep track of monthly payments and expenses
+- Property reminders for things such as maintenance, lease agreement, and rental vacancies.
   
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
@@ -52,27 +52,12 @@ The purpose of this web application is to provide real estate investors a quick 
 
 ![image](https://user-images.githubusercontent.com/80142574/122847567-f417ce80-d2d5-11eb-9822-5e2cf136e79d.png)
 
+![image](https://user-images.githubusercontent.com/80142574/122847928-91730280-d2d6-11eb-8735-f41e4432fcb9.png)
 
+![image](https://user-images.githubusercontent.com/80142574/122847974-a780c300-d2d6-11eb-8604-e1cfe89f5d35.png)
 
-![Dummy Link](url)
+![image](https://user-images.githubusercontent.com/80142574/122848057-d008bd00-d2d6-11eb-9ef4-f16309de78c2.png)
 
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
