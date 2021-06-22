@@ -37,7 +37,7 @@
 
 #### Wireframes
 
-![Toggle Wireframe](https://www.figma.com/file/LkMoG9HFDxFZX4EB8KOpSx/Toggle?node-id=18%3A1)
+[Toggle Wireframe](https://www.figma.com/file/LkMoG9HFDxFZX4EB8KOpSx/Toggle?node-id=18%3A1)
 
 ![image](https://user-images.githubusercontent.com/80142574/122847567-f417ce80-d2d5-11eb-9822-5e2cf136e79d.png)
 
