@@ -1,8 +1,9 @@
 #  Toggle
 
-> The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
+> The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers in order to avoid spending time managing multiple listings and tenants. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application. Using Toggle will save investors time and money,which will allow them to continue to scale their business.
 
 ## MVP
+- Users can create an account
 - Users can view property listings and tenants
 - Track scheduled maintenance and leasing agreements
 - Users can edit property listings and tenant profiles  
@@ -13,20 +14,12 @@
 - Landlords can respond by to tenant requests
 - Landlords can keep track of monthly payments and expenses
 - Property reminders for things such as maintenance, lease agreement, and rental vacancies.
-  
-- [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
-
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
-
-<br>
+- Seamless user experience on desktop and mobile
+- User is able to create an account
+- Full CRUD capbability
 
 ### Libraries and Dependencies
 
@@ -51,7 +44,6 @@
 
 ![image](https://user-images.githubusercontent.com/80142574/122848360-60df9880-d2d7-11eb-8d8e-6c2826685fc4.png)
 
-
 ![image](https://user-images.githubusercontent.com/80142574/122848057-d008bd00-d2d6-11eb-9ef4-f16309de78c2.png)
 
 
@@ -64,55 +56,41 @@
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
-``` structure
-
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-```
 
 #### Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create Models    |    H     |     1 hrs      |      TBD     |    TBD    |
+| Seed Data and Build Routes |    H     |     3 hrs      |     TBD     |     TBD     |
+| Test Routes |    H     |     .5 hrs      |     TBD     |     TBD     |
+| Set Up Cors |    H     |     .5 hrs      |    TBD     |     TBD     |
+| Create Controller Files |    H     |     3 hrs      |     TBD     |     TBD     |
+| Test API |    H     |     1 hrs      |     TBD     |     TBD     |
+| Create React App and Clear Boilerplate |    H     |     2 hrs      |     TBD     |     TBD     |
+| Create File Structure |    H     |     1 hrs      |     TBD     |     TBD     |
+| Complete Screen, Components and Connections |    H     |     10 hrs      |     TBD     |     TBD     |
+| CSS Styling |    H     |     10 hrs      |     TBD     |     TBD     |
+| Create Responsive Design |    H     |     4 hrs      |     TBD     |     TBD     |
+| Deploy to Production |    H     |     1 hrs      |     TBD     |     TBD     |
+| Review App Funcationality for Bugs |    H     |     1 hrs      |     TBD     |     TBD     |
+| Presenatation Review |    H     |     2hrs      |     TBD     |     TBD     |
+| TOTAL               |          |     40 hrs      |     TBD     |     TBD     |
 
 
-<br>
 
 ### Server (Back End)
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![image](https://user-images.githubusercontent.com/80142574/122855318-0ea47480-d2e3-11eb-9dec-6b80d2e394ae.png)
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
-<br>
+
 
 ## Code Showcase
 
 > Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
 
 ## Code Issues & Resolutions
 
