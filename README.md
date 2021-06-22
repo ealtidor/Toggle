@@ -1,6 +1,6 @@
 #  Toggle
 
-> The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers to avoid spending time managing multiple listings and tenants. Toggle provides users the ability to store all of their properties and tenants in one central location that can be accessed anywhere at anytime. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application. Using Toggle will save investors time and money,which will allow them to continue to scale their business.
+> The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers to avoid spending time managing multiple listings and tenants. Toggle provides users the ability to store all of their properties and tenants in one central location that can be accessed anywhere at anytime. Users can manage multiple listings, maintain tenant profiles, and keep track of scheduled maintenance all in one application. Using Toggle will save investors time and money, which will provide them the ability to continue to scale their business.
 
 ## MVP
 - Users can create an account
@@ -11,9 +11,10 @@
 
 ## POST-MVP
 - Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
-- Landlords can respond by to tenant requests
+- Landlords can respond to tenant requests through the app
 - Landlords can keep track of monthly payments and expenses
 - Property reminders for things such as maintenance, lease agreement, and rental vacancies.
+- Users can send out property annoucnements to tenants
 
 ### Goals
 
@@ -25,10 +26,10 @@
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | Front-End |
-|   React Router   | Front-End |
-|     Ruby      | Back-End |
-| Ruby on Rails  | Back-End |
+|      React js       | Creates interactive UIs; Front-End |
+|   React Router   | Uses component structure to call components, which display the appropriate information; Front-End |
+|     Ruby      | A dynamic, open source programming language with a focus on simplicity and productivity; Back-End |
+| Ruby on Rails  | Server-side web application framework; Back-End |
 
 <br>
 
