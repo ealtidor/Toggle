@@ -1,7 +1,6 @@
 #  Toggle
 
-> Overview
-The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
+> The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
 
 ## MVP
 - Users can view property listings and tenants
