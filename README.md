@@ -84,7 +84,7 @@
 
 #### ERD Model
 
-![image](https://user-images.githubusercontent.com/80142574/122855318-0ea47480-d2e3-11eb-9dec-6b80d2e394ae.png)
+![image](![image](https://user-images.githubusercontent.com/80142574/122946971-cc614e80-d347-11eb-80ab-a3441c6ecbb8.png))
 
 
 
