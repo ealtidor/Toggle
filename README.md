@@ -1,19 +1,19 @@
 #  Toggle
 
-- Overview
+> Overview
 The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
 
 ## MVP
-  - Users can view property listings and tenants
-  - Track scheduled maintenance and leasing agreements
-  - Users can edit property listings and tenant profiles  
+- _Users can view property listings and tenants
+- _Track scheduled maintenance and leasing agreements
+- _Users can edit property listings and tenant profiles  
 
 
 ## POST-MVP
-  - Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
-  - Landlords can respond by to tenant requests
-  - Landlords can keep track of monthly payments and expenses
-  - Property reminders for things such as maintenance, lease agreement, and rental vacancies.
+- _Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
+- _Landlords can respond by to tenant requests
+- _Landlords can keep track of monthly payments and expenses
+- _Property reminders for things such as maintenance, lease agreement, and rental vacancies.
   
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
