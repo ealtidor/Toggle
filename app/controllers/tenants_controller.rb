@@ -18,7 +18,7 @@ class TenantsController < ApplicationController
     @tenant = Tenant.new(tenant_params)
 
     if @tenant.save
-      render json: @tenant, status: :created, location: @tenant
+      render json: @tenant, status: :created
     else
       render json: @tenant.errors, status: :unprocessable_entity
     end
