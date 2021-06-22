@@ -1,19 +1,15 @@
-#  Toggle README <!-- omit in toc -->
+#  Toggle
 
 - Overview
-The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to add all of their properties and tenants in one central location. Users can manage requests, comments, or questions from their tenants with one application, versus tracking down multiple emails and spending extra money.
+The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers who typically reaches out to the property owner anyway to make decisions as it relates to the property. Toggle provides users the ability to store all of their properties and tenants in one central location. Users can manage multiple listings, maintain tenant profiles all, and keep track of scheduled maintenance all in one application.
 
-- [MVP](#mvp)
-  - [Goals](#goals)
-  - [Libraries and Dependencies](#libraries-and-dependencies)
-  - [Client (Front End)](#client-front-end)
-    - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
-    - [Component Architecture](#component-architecture)
-    - [Time Estimates](#time-estimates)
-  - [Server (Back End)](#server-back-end)
-    - [ERD Model](#erd-model)
-- [Post-MVP]
+## MVP
+  - Users can view property listings and tenants
+  - Track scheduled maintenance and leasing agreements
+  - Users can edit property listings and tenant profiles  
+
+
+## POST-MVP
   - Tenants can contact landlors for things such as, service request, general questions, and/or concerns landlord by completing forms  
   - Landlords can respond by to tenant requests
   - Landlords can keep track of monthly payments and expenses
@@ -22,22 +18,6 @@ The purpose of this web application is to provide real estate investors a quick 
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
-<br>
-
-## Overview
-
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-
-<br>
-
-## MVP
-
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
 
 ### Goals
 
@@ -55,11 +35,10 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front-End |
+|   React Router   | Front-End |
+|     Ruby      | Back-End |
+| Ruby on Rails  | Back-End |
 
 <br>
 
@@ -69,9 +48,11 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Toggle Wireframe](https://www.figma.com/file/LkMoG9HFDxFZX4EB8KOpSx/Toggle?node-id=18%3A1)
 
-- Desktop Landing
+![image](https://user-images.githubusercontent.com/80142574/122847567-f417ce80-d2d5-11eb-9822-5e2cf136e79d.png)
+
+
 
 ![Dummy Link](url)
 
