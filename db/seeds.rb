@@ -5,3 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Property.destroy_all
+Tenant.destroy_all
+
+@user = User.create!(username: 'Loon', 
+email: 'loon@gmail.com', 
+password: '1234567')
+
+puts "#{User.count} users created"
+
+@property = Property.create!(
+name: 'Property 1', 
+rent: 1500, 
+beds: 2, 
+bath: 2, 
+sq_ft: 1178, 
+address: '123 LOON STREET, DECATUR, GA, 45678', 
+current_tenant: 'Jane Doe', 
+rental_agreement: '06/30/2020 to 12/30/2021', 
+next_maintenance: '09/30/2021', 
+amenities: 'Pool, Dog Park, Bike Trail, MARTA station', 
+user: @user)
+
+puts "#{Property.count} properties created"
+
+@tenant = Tenant.create!(
+name: 'Jane Doe', 
+previous_address: '2556 NW 32ND COURT', 
+city: 'FORT LAUDERDALE', 
+state: 'FL', 
+zip_code: '33309', 
+email: 'JANE_DOE@GMAIL.COM', 
+primary_number: '054-123-4567', 
+alt_number: '754-678-4040', 
+preferred_contact: 'email', 
+property: @property)
+
+puts "#{Tenant.count} tenants created"
+
