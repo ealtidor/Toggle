@@ -1,4 +1,5 @@
-import {Link} from 'react-router-dom'
+import './Layout.css'
+import { Link } from 'react-router-dom'
 
 export default function Layout(props) {
   return (
@@ -8,7 +9,6 @@ export default function Layout(props) {
         <Link to='/properties'>PROPERTIES</Link>
         <Link to='/login'>LOGIN</Link>
         <Link to='/register'>REGISTER</Link>
-        <hr/>
       </header>
       {props.children}
       <footer>
