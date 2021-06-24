@@ -27,4 +27,5 @@ export const deleteProperty = async (id) => {
 
 export const addTenant = async (tenantId, propertyId) => {
   const resp = await api.put(`/tenants/${tenantId}/properties/${propertyId}`);
+  return resp.data
 };
