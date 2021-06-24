@@ -25,6 +25,6 @@ export const deleteProperty = async (id) => {
   return resp;
 };
 
-export const addTenant = async (propertyId, tenantId) => {
+export const addTenant = async (tenantId, propertyId) => {
   const resp = await api.put(`/tenants/${tenantId}/properties/${propertyId}`);
 };
