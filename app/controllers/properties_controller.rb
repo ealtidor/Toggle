@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: [:show, :update, :destroy]
+  before_action :set_property, only: [:show, :update, :destroy, :add_tenant]
+  before_action :authorize_request, only:[:create, :update, :destroy]
 
   # GET /properties
   def index
@@ -10,13 +11,13 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   def show
-    render json: @property
+    render json: @property, include: :tenants
   end
 
   # POST /properties
   def create
     @property = Property.new(property_params)
-
+@property.user = @current_user
     if @property.save
       render json: @property, status: :created
     else
@@ -37,6 +38,14 @@ class PropertiesController < ApplicationController
   def destroy
     @property.destroy
   end
+
+  def add_tenant
+    @tenant = Tenant.find(params[:tenant_id])
+
+    @tenant.properties << @property
+    render json: @property, include: :tenants
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

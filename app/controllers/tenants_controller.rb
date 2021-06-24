@@ -1,5 +1,6 @@
 class TenantsController < ApplicationController
   before_action :set_tenant, only: [:show, :update, :destroy]
+  before_action :authorize_request, only:[:create, :update, :destroy]
 
   # GET /tenants
   def index
@@ -10,13 +11,13 @@ class TenantsController < ApplicationController
 
   # GET /tenants/1
   def show
-    render json: @tenant
+    render json: @tenant, include: :properties
   end
 
   # POST /tenants
   def create
     @tenant = Tenant.new(tenant_params)
-
+@tenant.user = @current_user
     if @tenant.save
       render json: @tenant, status: :created
     else

@@ -15,7 +15,7 @@ password: '1234567')
 
 puts "#{User.count} users created"
 
-@property = Property.create!(
+@properties = Property.create!([{
 name: 'Property 1', 
 rent: 1500, 
 beds: 2, 
@@ -26,7 +26,7 @@ current_tenant: 'Jane Doe',
 rental_agreement: '06/30/2020 to 12/30/2021', 
 next_maintenance: '09/30/2021', 
 amenities: 'Pool, Dog Park, Bike Trail, MARTA station', 
-user: @user)
+user: @user}])
 
 puts "#{Property.count} properties created"
 
@@ -40,7 +40,8 @@ email: 'JANE_DOE@GMAIL.COM',
 primary_number: '054-123-4567', 
 alt_number: '754-678-4040', 
 preferred_contact: 'email', 
-property: @property)
+property: @properties.first)
 
 puts "#{Tenant.count} tenants created"
 
+@properties.first.tenants = [@tenant]
