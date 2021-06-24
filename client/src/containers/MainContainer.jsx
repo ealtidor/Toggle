@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 // Custom Components
 import AllProperties from "../screens/Properties/AllProperties/AllProperties";
-import CreateProperty from '../screens/Properties/CreateProperty/CreateProperty'
+import CreateProperty from '../screens/Properties/CreateProperty/CreateProperty';
+import DisplayProperty from '../screens/Properties/DisplayProperty/DisplayProperty'
 // Services
 import { getAllProperties, postProperty } from "../services/property";
 
@@ -26,9 +27,15 @@ export default function MainContainer() {
     history.push('/properties')
   }
 
+  // Get One Property
+  
+
   return (
     <div>
       <Switch>
+        <Route path='/properties/:id'>
+<DisplayProperty/>
+        </Route>
         <Route path="/properties/new">
           <CreateProperty handleCreate={ handleCreate}/>
         </Route>

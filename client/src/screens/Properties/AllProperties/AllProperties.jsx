@@ -9,6 +9,7 @@ export default function AllProperties(props) {
       <h1>PROPERTIES</h1>
       {properties.map(property => (
         <div className='property-container' key={property.id}>
+          <Link to={`/properties/${property.id}`}>
           <img className='property-img' src={property.img_url} alt='Property'/>
           <div className='orange-container'>
           <h3>{property.name}</h3>
@@ -33,6 +34,7 @@ export default function AllProperties(props) {
               <p>{ property.current_tenant}</p>
             </div>
           </div>
+        </Link>
         </div>
       ))}
       <Link to='/properties/new'><button>+ Property</button></Link>

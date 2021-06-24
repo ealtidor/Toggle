@@ -1,0 +1,4 @@
+.property-display-container{
+display: flex;
+flex-direction: row;
+}
