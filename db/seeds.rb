@@ -25,7 +25,8 @@ address: '123 LOON STREET, DECATUR, GA, 45678',
 current_tenant: 'Jane Doe', 
 rental_agreement: '06/30/2020 to 12/30/2021', 
 next_maintenance: '09/30/2021', 
-amenities: 'Pool, Dog Park, Bike Trail, MARTA station', 
+amenities: 'Pool, Dog Park, Bike Trail, MARTA station',
+img_url: 'https://images.unsplash.com/photo-1587094313669-faf7668ed8a8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', 
 user: @user}])
 
 puts "#{Property.count} properties created"

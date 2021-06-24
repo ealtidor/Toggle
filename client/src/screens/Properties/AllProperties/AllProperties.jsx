@@ -1,5 +1,5 @@
 import './AllProperties.css'
-import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function AllProperties(props) {
   const { properties } = props
@@ -35,6 +35,7 @@ export default function AllProperties(props) {
           </div>
         </div>
       ))}
+      <Link to='/properties/new'><button>+ Property</button></Link>
     </div>
   )
 }
