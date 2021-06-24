@@ -9,6 +9,7 @@ export default function Layout(props) {
       <header>
         {currentUser ? (
           <>
+            <Link to="/tenants">TENANTS</Link>
             <Link to="/properties">PROPERTIES</Link>
             <p>{currentUser.username}</p>
             <button onClick={handleLogout}>Logout</button>
