@@ -73,17 +73,20 @@ export default function MainContainer() {
         <Route path="/properties/:id/edit">
           <EditProperty properties={properties} handleUpdate={handleUpdate} />
         </Route>
-        <Route path="/properties/:id">
-          <DisplayProperty handleDelete={handleDelete} />
-        </Route>
         <Route path="/properties/new">
           <CreateProperty handleCreate={handleCreate} />
+        </Route>
+        <Route path="/properties/:id">
+          <DisplayProperty handleDelete={handleDelete} />
         </Route>
         <Route path="/properties">
           <AllProperties properties={properties} />
         </Route>
         <Route path="/tenants">
           <AllTenants tenants={tenants } properties={properties}/>
+        </Route>
+        <Route path='/'>
+     
         </Route>
       </Switch>
     </div>

@@ -1,4 +1,9 @@
-form {
+.create-details-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.create-fields{
   display: flex;
   flex-direction: column;
 }

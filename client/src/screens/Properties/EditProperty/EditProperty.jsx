@@ -59,18 +59,21 @@ export default function EditProperty(props) {
   }, [properties]);
 
   const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData((prevState) => ({
-			...prevState,
-			[name]: value,
-		}));
-	};
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   return (
-    <form className='edit-container' onSubmit={(e) => {
-      e.preventDefault();
-      handleUpdate(id, formData);
-    }}>
+    <form
+      className="edit-container"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleUpdate(id, formData);
+      }}
+    >
       <button>SAVE</button>
       <input
         placeholder="PROPERTY NAME"
@@ -79,108 +82,104 @@ export default function EditProperty(props) {
         value={name}
         onChange={handleChange}
       />
-      <div className='edit-details-container'>
-      <div className='edit-img-container'>
-      <img className="edit-property-image" src={img_url} alt={name} />
-          <div className='edit-img-field'>
-          <label htmlFor='img_url'>
-        PASTE IMAGE URL:
-      </label>
-        <input
-          type="text"
-          name="img_url"
-          value={img_url}
-          onChange={handleChange}
-        />
-      </div>
+      <div className="edit-details-container">
+        <div className="edit-img-container">
+          <img className="edit-property-image" src={img_url} alt={name} />
+          <div className="edit-img-field">
+            <label htmlFor="img_url">PASTE IMAGE URL:</label>
+            <input
+              type="text"
+              name="img_url"
+              value={img_url}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-        <div className='edit-fields'>
+        <div className="edit-fields">
+          <label>
+            MONTHLY RENT
+            <input
+              type="integer"
+              name="rent"
+              value={rent}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            # OF BEDS
+            <input
+              type="integer"
+              name="beds"
+              value={beds}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            # OF BATHS
+            <input
+              type="integer"
+              name="bath"
+              value={bath}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            SQ. FT.
+            <input
+              type="integer"
+              name="sq_ft"
+              value={sq_ft}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            ADDRESS
+            <input
+              type="text"
+              name="address"
+              value={address}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            CURRENT TENANT
+            <input
+              type="text"
+              name="current_tenant"
+              value={current_tenant}
+              onChange={handleChange}
+            />
+          </label>
 
-      <label>
-        MONTHLY RENT
-        <input
-          type="integer"
-          name="rent"
-          value={rent}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        # OF BEDS
-        <input
-          type="integer"
-          name="beds"
-          value={beds}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        # OF BATHS
-        <input
-          type="integer"
-          name="bath"
-          value={bath}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        SQ. FT.
-        <input
-          type="integer"
-          name="sq_ft"
-          value={sq_ft}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        ADDRESS
-        <input
-          type="text"
-          name="address"
-          value={address}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        CURRENT TENANT
-        <input
-          type="text"
-          name="current_tenant"
-          value={current_tenant}
-          onChange={handleChange}
-        />
-      </label>
-  
-      <label>
-        RENTAL AGREEMENT
-        <input
-          type="text"
-          name="rental_agreement"
-          value={rental_agreement}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        NEXT SCHEDULED MAINTENANCE
-        <input
-          type="text"
-          name="next_maintenance"
-          value={next_maintenance}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        AMENITIES
-        <input
-          type="text"
-          name="amenities"
-          value={amenities}
-          onChange={handleChange}
-        />
-      </label>
+          <label>
+            RENTAL AGREEMENT
+            <input
+              type="text"
+              name="rental_agreement"
+              value={rental_agreement}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            NEXT SCHEDULED MAINTENANCE
+            <input
+              type="text"
+              name="next_maintenance"
+              value={next_maintenance}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            AMENITIES
+            <input
+              type="text"
+              name="amenities"
+              value={amenities}
+              onChange={handleChange}
+            />
+          </label>
         </div>
-    
-</div>
+      </div>
     </form>
-    );
+  );
 }
