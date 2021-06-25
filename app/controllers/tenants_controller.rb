@@ -11,7 +11,7 @@ class TenantsController < ApplicationController
 
   # GET /tenants/1
   def show
-    render json: @tenant, include: :properties
+    render json: @tenant
   end
 
   # POST /tenants

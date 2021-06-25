@@ -6,6 +6,8 @@ import CreateProperty from "../screens/Properties/CreateProperty/CreateProperty"
 import DisplayProperty from "../screens/Properties/DisplayProperty/DisplayProperty";
 import EditProperty from "../screens/Properties/EditProperty/EditProperty";
 import AllTenants from "../screens/Tenants/AllTenants/AllTenants";
+import DisplayTenant from "../screens/Tenants/DisplayTenant/DisplayTenant";
+
 // Services
 import {
   deleteProperty,
@@ -82,11 +84,14 @@ export default function MainContainer() {
         <Route path="/properties">
           <AllProperties properties={properties} />
         </Route>
-        <Route path="/tenants">
-          <AllTenants tenants={tenants } properties={properties}/>
+        <Route path="/tenants/:id">
+          <DisplayTenant handleDelete={handleDelete} />
         </Route>
-        <Route path='/'>
-     
+        <Route path="/tenants">
+          <AllTenants tenants={tenants} properties={properties} />
+        </Route>
+        <Route path="/">
+          <p>This is home</p>
         </Route>
       </Switch>
     </div>
