@@ -22,7 +22,7 @@ export default function AllProperties(props) {
             <p>Beds</p>
             </div>
             <div className='bath-container'>
-            <p>{property.baths}</p>
+            <p>{property.bath}</p>
               <p>Baths</p>
             </div>
             <div className='amenities-container'>

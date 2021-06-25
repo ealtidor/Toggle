@@ -1,11 +1,12 @@
 import './DisplayProperty.css'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import {getOneProperty} from '../../../services/property'
 
-export default function DisplayProperty() {
+export default function DisplayProperty(props) {
   const [propertyItem, setPropertyItem] = useState(null)
   const { id } = useParams()
+  const {handleDelete} = props
   
   useEffect(() => {
     const fetchPropertyItem = async () => {
@@ -20,6 +21,8 @@ setPropertyItem(propertyData)
   return (
     <div>
       <h1>{propertyItem?.name}</h1>
+      <Link to={`/properties/${id}/edit`}>EDIT</Link>
+        <button onClick={()=> handleDelete(propertyItem?.id)}>DELETE</button>
       <div className='property-display-container'>
         <img className='display-property-img' src={propertyItem?.img_url} alt='Property' />
         <div className='display details'>
@@ -29,7 +32,7 @@ setPropertyItem(propertyData)
             <p>Beds</p>
             </div>
             <div className='display-bath-container'>
-            <p>{propertyItem?.baths}</p>
+            <p>{propertyItem?.bath}</p>
               <p>Baths</p>
         </div>
         <div className='display-sqft-container'>
