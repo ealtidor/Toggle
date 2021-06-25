@@ -18,12 +18,13 @@ export default function Login(props) {
   
   
   return (
+    <div className='form-container'>
     <form onSubmit={(e) => {
       e.preventDefault()
       handleLogin(formData)
     }}>
-      <h3>LOGIN</h3>
-      <label>
+      <h3 className='login-header'>LOGIN</h3>
+      <label className='login-username'>
         USERNAME
         <input
           type="text"
@@ -32,7 +33,7 @@ export default function Login(props) {
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label className='login-password'>
         PASSWORD
         <input
           type="password"
@@ -41,7 +42,8 @@ export default function Login(props) {
           onChange={handleChange}
         />
       </label>
-      <button>SUBMIT</button>
+      <button className='login-button'>SUBMIT</button>
     </form>
+    </div>
   );
 }
