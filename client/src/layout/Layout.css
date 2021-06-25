@@ -1,3 +1,8 @@
-header {
-border-bottom: 1px solid black;
+nav {
+  background-color: black;
+color: white;
+}
+header{
+  text-decoration: none;
+  text-decoration-color: white;
 }

@@ -5,6 +5,7 @@ export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <div>
+      <nav>
       <h1>TOGGLE</h1>
       <header>
         {currentUser ? (
@@ -21,6 +22,7 @@ export default function Layout(props) {
           </>
         )}
       </header>
+      </nav>
       {props.children}
       <footer>
         <p>© Emanuella Altidor, 2021</p>

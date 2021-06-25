@@ -50,6 +50,7 @@ export default function MainContainer() {
     setProperties((prevState) =>
       prevState.filter((property) => property.id !== id)
     );
+    history.push('/properties')
   };
 
   return (

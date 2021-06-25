@@ -26,7 +26,7 @@ setPropertyItem(propertyData)
       <div className='property-display-container'>
         <img className='display-property-img' src={propertyItem?.img_url} alt='Property' />
         <div className='display details'>
-        <p>{propertyItem?.rent}</p>
+        <p>${propertyItem?.rent}</p>
         <div className='display-bed-container'>
             <p>{propertyItem?.beds}</p>
             <p>Beds</p>
