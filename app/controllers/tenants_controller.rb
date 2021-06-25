@@ -6,12 +6,13 @@ class TenantsController < ApplicationController
   def index
     @tenants = Tenant.all
 
-    render json: @tenants
+    render json: @tenants, include: :property
   end
 
   # GET /tenants/1
   def show
-    render json: @tenant
+    # @property = Property.find(@tenant.property_id)
+    render json: @tenant, include: :property
   end
 
   # POST /tenants

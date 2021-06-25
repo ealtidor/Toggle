@@ -1,0 +1,28 @@
+.table-container{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.tenant-list{
+  display: flex;
+    justify-content: center;
+}
+
+.tenant-column,
+.property-column{
+  border: 1px solid black;
+    width: 10em;
+}
+
+.table-header{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.tenant-header,
+.property-header{
+  border: 1px solid black;
+  width: 10em;  
+}

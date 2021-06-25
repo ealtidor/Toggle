@@ -20,6 +20,7 @@ import { getAllTenants } from "../services/tenant";
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
   const [tenants, setTenants] = useState([]);
+  const [propertyItem, setPropertyItem] = useState(null)
   const history = useHistory();
 
   // Get All Properties
@@ -79,7 +80,7 @@ export default function MainContainer() {
           <CreateProperty handleCreate={handleCreate} />
         </Route>
         <Route path="/properties/:id">
-          <DisplayProperty handleDelete={handleDelete} />
+          <DisplayProperty handleDelete={handleDelete} setPropertyItem={setPropertyItem} propertyItem={propertyItem}/>
         </Route>
         <Route path="/properties">
           <AllProperties properties={properties} />
@@ -88,7 +89,7 @@ export default function MainContainer() {
           <DisplayTenant handleDelete={handleDelete} />
         </Route>
         <Route path="/tenants">
-          <AllTenants tenants={tenants} properties={properties} />
+          <AllTenants tenants={tenants} />
         </Route>
         <Route path="/">
           <p>This is home</p>

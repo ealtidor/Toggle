@@ -4,9 +4,9 @@ import { useParams, Link } from 'react-router-dom'
 import {getOneProperty} from '../../../services/property'
 
 export default function DisplayProperty(props) {
-  const [propertyItem, setPropertyItem] = useState(null)
+  // const [propertyItem, setPropertyItem] = useState(null)
   const { id } = useParams()
-  const {handleDelete} = props
+  const {handleDelete , propertyItem, setPropertyItem} = props
   
   useEffect(() => {
     const fetchPropertyItem = async () => {
@@ -44,7 +44,10 @@ setPropertyItem(propertyData)
         <p>OVERVIEW</p>
         <div className='display-tenant-container'>
               <p>Current Tenant:</p>
-              <p>{ propertyItem?.current_tenant}</p>
+            {/* <p>{propertyItem?.current_tenant}</p> */}
+            {propertyItem?.tenants.map((tenant) => (
+              <p>{tenant.name }</p>
+            ))}
         </div>
         <div className='display-agreement-container'>
               <p>Rental Agreement:</p>
