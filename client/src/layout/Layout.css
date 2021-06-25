@@ -4,14 +4,15 @@
 nav {
   background-color: black;
 color: white;
-height: 10%;
+height: 20vh;
 }
 header{
   text-decoration: none;
   text-decoration-color: white;
 }
+
 .layout-children{
- 
+  height: 100%;
 }
 
 footer{
@@ -19,5 +20,4 @@ footer{
   color: white;
   text-align: left;
   padding: .1rem .5rem;
-  height: 6%;
 }
