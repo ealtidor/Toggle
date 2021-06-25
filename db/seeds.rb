@@ -102,18 +102,68 @@ user: @user},
 
 puts "#{Property.count} properties created"
 
-@tenant = Tenant.create!(
-name: 'Jane Doe', 
-previous_address: '2556 NW 32ND COURT', 
-city: 'FORT LAUDERDALE', 
-state: 'FL', 
-zip_code: '33309', 
-email: 'JANE_DOE@GMAIL.COM', 
-primary_number: '054-123-4567', 
-alt_number: '754-678-4040', 
-preferred_contact: 'email', 
-property: @properties.first)
+@tenant = Tenant.create!([{
+  name: 'Jane Doe', 
+  previous_address: '2556 NW 32ND COURT', 
+  city: 'FORT LAUDERDALE', 
+  state: 'FL', 
+  zip_code: '33309', 
+  email: 'JANE_DOE@GMAIL.COM', 
+  primary_number: '054-123-4567', 
+  alt_number: '754-678-4040', 
+  preferred_contact: 'email', 
+  property: @properties.first
+},
+{
+  name: 'Loon Doe', 
+  previous_address: '2556 NW 32ND COURT', 
+  city: 'FORT LAUDERDALE', 
+  state: 'FL', 
+  zip_code: '33309', 
+  email: 'JANE_DOE@GMAIL.COM', 
+  primary_number: '054-123-4567', 
+  alt_number: '754-678-4040', 
+  preferred_contact: 'email', 
+  property: @properties.second
+},
+{
+  name: 'John Doe', 
+  previous_address: '2556 NW 32ND COURT', 
+  city: 'FORT LAUDERDALE', 
+  state: 'FL', 
+  zip_code: '33309', 
+  email: 'JANE_DOE@GMAIL.COM', 
+  primary_number: '054-123-4567', 
+  alt_number: '754-678-4040', 
+  preferred_contact: 'email', 
+  property: @properties.third
+},
+{
+  name: 'Bruno Doe', 
+  previous_address: '2556 NW 32ND COURT', 
+  city: 'FORT LAUDERDALE', 
+  state: 'FL', 
+  zip_code: '33309', 
+  email: 'JANE_DOE@GMAIL.COM', 
+  primary_number: '054-123-4567', 
+  alt_number: '754-678-4040', 
+  preferred_contact: 'email', 
+  property: @properties.fourth
+},
+{
+  name: 'David Doe', 
+  previous_address: '2556 NW 32ND COURT', 
+  city: 'FORT LAUDERDALE', 
+  state: 'FL', 
+  zip_code: '33309', 
+  email: 'JANE_DOE@GMAIL.COM', 
+  primary_number: '054-123-4567', 
+  alt_number: '754-678-4040', 
+  preferred_contact: 'email', 
+  property: @properties.fifth
+},
+])
 
 puts "#{Tenant.count} tenants created"
 
-@properties.first.tenants = [@tenant]
+# @properties.first.tenants = [@tenant]
