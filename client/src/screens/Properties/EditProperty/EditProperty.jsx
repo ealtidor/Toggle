@@ -67,7 +67,7 @@ export default function EditProperty(props) {
 	};
 
   return (
-    <form onSubmit={(e) => {
+    <form className='edit-container' onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id, formData);
     }}>
@@ -79,6 +79,22 @@ export default function EditProperty(props) {
         value={name}
         onChange={handleChange}
       />
+      <div className='edit-details-container'>
+      <div className='edit-img-container'>
+      <img className="edit-property-image" src={img_url} alt={name} />
+          <div className='edit-img-field'>
+          <label htmlFor='img_url'>
+        PASTE IMAGE URL:
+      </label>
+        <input
+          type="text"
+          name="img_url"
+          value={img_url}
+          onChange={handleChange}
+        />
+      </div>
+        </div>
+        <div className='edit-fields'>
 
       <label>
         MONTHLY RENT
@@ -162,15 +178,9 @@ export default function EditProperty(props) {
           onChange={handleChange}
         />
       </label>
-      <label>
-        PASTE IMAGE URL:
-        <input
-          type="text"
-          name="img_url"
-          value={img_url}
-          onChange={handleChange}
-        />
-      </label>
+        </div>
+    
+</div>
     </form>
     );
 }
