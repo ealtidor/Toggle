@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <div>
+    <div className='layout-container'>
       <nav>
       <h1>TOGGLE</h1>
       <header>
@@ -23,10 +23,12 @@ export default function Layout(props) {
         )}
       </header>
       </nav>
+      <div className='layout-children'>
       {props.children}
-      <footer>
+      </div>
+      {/* <footer>
         <p>© Emanuella Altidor, 2021</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

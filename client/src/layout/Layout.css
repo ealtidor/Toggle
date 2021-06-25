@@ -1,8 +1,23 @@
+.layout-container{
+  height: 100%;
+}
 nav {
   background-color: black;
 color: white;
+height: 10%;
 }
 header{
   text-decoration: none;
   text-decoration-color: white;
+}
+.layout-children{
+ 
+}
+
+footer{
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding: .1rem .5rem;
+  height: 6%;
 }
