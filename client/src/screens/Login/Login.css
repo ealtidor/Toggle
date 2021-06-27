@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
 }
-form {
+.login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,8 +21,8 @@ form {
   padding: 10vh;
 }
 .login-button {
-  width: 30%;
-  padding: 0.6vh;
+  width: 6rem;
+  padding: 1vh;
   background-color: rgb(251, 120, 40);
   color: white;
   font-weight: bold;
@@ -34,4 +34,7 @@ form {
 
 .login-password {
   margin-bottom: 1rem;
+}
+.register-quotes{
+  
 }
