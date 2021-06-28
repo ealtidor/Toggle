@@ -9,7 +9,7 @@ export default function CreateProperty(props) {
     bath: 0,
     sq_ft: 0,
     address: "",
-    current_tenant: "",
+    // tenants.name: "",
     rental_agreement: "",
     next_maintenance: "",
     amenities: "",
@@ -23,7 +23,7 @@ export default function CreateProperty(props) {
     bath,
     sq_ft,
     address,
-    current_tenant,
+    // tenants.name,
     rental_agreement,
     next_maintenance,
     amenities,
@@ -116,12 +116,12 @@ export default function CreateProperty(props) {
           </label>
           <label>
             CURRENT TENANT
-            <input
+            {/* <input
               type="text"
-              name="current_tenant"
-              value={current_tenant}
+              name="tenants.name"
+              value={tenants.name}
               onChange={handleChange}
-            />
+            /> */}
           </label>
           <label>
             RENTAL AGREEMENT

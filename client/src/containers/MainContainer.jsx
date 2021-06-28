@@ -15,18 +15,18 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants } from "../services/tenant";
+import { getAllTenants, postTenant, putTenant } from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
   const [tenants, setTenants] = useState([]);
-  const [propertyItem, setPropertyItem] = useState(null)
+  const [propertyItem, setPropertyItem] = useState(null);
   const history = useHistory();
 
   // Get All Properties
   useEffect(() => {
     const fetchProperties = async () => {
-      const propertyList = await getAllProperties()
+      const propertyList = await getAllProperties();
       setProperties(propertyList);
     };
     fetchProperties();
@@ -49,6 +49,10 @@ export default function MainContainer() {
   };
 
   // Create a Tenant
+  const handleTenantCreate = async (formData) => {
+    const tenantItem = await postTenant(formData);
+    setTenants((prevState) => [...prevState, tenantItem]);
+  };
 
   // Update Property
   const handleUpdate = async (id, formData) => {
@@ -56,6 +60,17 @@ export default function MainContainer() {
     setProperties((prevState) =>
       prevState.map((property) => {
         return property.id === Number(id) ? propertyItem : property;
+      })
+    );
+    history.push("/properties/:id");
+  };
+
+  // Update Tenant
+  const handleTenantUpdate = async (id, formData) => {
+    const tenantItem = await putTenant(id, formData);
+    setTenants((prevState) =>
+      prevState.map((tenant) => {
+        return tenant.id === Number(id) ? tenantItem : tenant;
       })
     );
     history.push("/properties/:id");
@@ -74,13 +89,24 @@ export default function MainContainer() {
     <div>
       <Switch>
         <Route path="/properties/:id/edit">
-          <EditProperty properties={properties} handleUpdate={handleUpdate} />
+          <EditProperty
+            properties={properties}
+            handleUpdate={handleUpdate}
+            handleTenantUpdate={handleTenantUpdate}
+          />
         </Route>
         <Route path="/properties/new">
-          <CreateProperty handleCreate={handleCreate} />
+          <CreateProperty
+            handleCreate={handleCreate}
+            handleTenantCreate={handleTenantCreate}
+          />
         </Route>
         <Route path="/properties/:id">
-          <DisplayProperty handleDelete={handleDelete} setPropertyItem={setPropertyItem} propertyItem={propertyItem}/>
+          <DisplayProperty
+            handleDelete={handleDelete}
+            setPropertyItem={setPropertyItem}
+            propertyItem={propertyItem}
+          />
         </Route>
         <Route path="/properties">
           <AllProperties properties={properties} />

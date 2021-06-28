@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DropdownButton  from "react-bootstrap/DropdownButton";
+// import DropdownButton  from "react-bootstrap/DropdownButton";
 
 
 export default function Layout(props) {
@@ -54,9 +54,7 @@ export default function Layout(props) {
         </div> */}
       </nav>
       <div className="layout-children" >{props.children}</div>
-      <footer>
-        <p>© Emanuella Altidor, 2021</p>
-      </footer>
+      
     </div>
   );
 }

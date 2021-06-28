@@ -15,7 +15,9 @@ export default function EditProperty(props) {
     next_maintenance: "",
     amenities: "",
     img_url: "",
+    tenants_attributes: [{ name: '' }]
   });
+  // const [tenantFormData, setTenantFormData]
 
   const {
     name,
@@ -31,7 +33,7 @@ export default function EditProperty(props) {
     img_url,
   } = formData;
 
-  const { properties, handleUpdate } = props;
+  const { properties, handleUpdate, handleTenantUpdate } = props;
   const { id } = useParams();
 
   useEffect(() => {
