@@ -34,7 +34,7 @@ const [tenantItem, setTenantItem] = useState(null)
       <div className="display-tenant-details">
         <div className='subdisplay-tenant-details'>
         <div className='previous-address-container'>
-        <p>PREVIOUS ADDRESS:</p>
+        <p className='edit-tenant-subheader'>PREVIOUS ADDRESS:</p>
         <p className='previous-address'>{tenantItem?.previous_address}</p>
         </div>
         <div className="address-details">
@@ -42,13 +42,13 @@ const [tenantItem, setTenantItem] = useState(null)
         <p>STATE: {tenantItem?.state}</p>
         <p>ZIP CODE: {tenantItem?.zip_code}</p>
         </div>
-        <p>EMAIL:</p>
+        <p className='edit-tenant-subheader'>EMAIL:</p>
         <p> {tenantItem?.email}</p>
-        <p>PRIMARY NUMBER:</p>
-        <p> {tenantItem?.primary_number}</p>
-        <p>ALTERNATE NUMBER:</p>
+        <p className='edit-tenant-subheader'>PRIMARY NUMBER:</p>
+        <p > {tenantItem?.primary_number}</p>
+        <p className='edit-tenant-subheader'>ALTERNATE NUMBER:</p>
         <p> {tenantItem?.alt_number}</p>
-        <p>PREFERRED METHOD OF CONTACT:</p>
+        <p className='edit-tenant-subheader'>PREFERRED METHOD OF CONTACT:</p>
         <p> { tenantItem?.preferred_contact}</p>
 
       </div>
