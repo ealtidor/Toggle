@@ -9,7 +9,7 @@ import DropdownButton  from "react-bootstrap/DropdownButton";
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <div className="layout-container">
+    <div className="layout-container" >
       <nav className="layout-nav">
         <h1 className="layout-header">TOGGLE</h1>
         <header className='desktop-header'>
@@ -53,7 +53,7 @@ export default function Layout(props) {
         </DropdownButton>
         </div> */}
       </nav>
-      <div className="layout-children">{props.children}</div>
+      <div className="layout-children" >{props.children}</div>
       <footer>
         <p>© Emanuella Altidor, 2021</p>
       </footer>
