@@ -1,8 +1,65 @@
-.edit-details-container{
+.edit-details-container {
   display: flex;
-  flex-direction:row ;
+  flex-direction: row;
+  background-color: white;
+  padding: 4rem;
+  width: 64rem;
 }
-.edit-fields{
+.edit-fields {
   display: flex;
   flex-direction: column;
+  padding-left: 3rem;
+  align-items: flex-start;
+}
+
+.edit-container {
+  margin: 10rem;
+}
+
+.edit-details-background {
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 7rem;
+  padding: 4rem 7rem 7rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 78rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.edit-container-background {
+  background: url(https://images.unsplash.com/photo-1524813686514-a57563d77965?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmVpZ2hib3Job29kfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)
+    no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-screen-save{
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: 600; 
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+    padding-left: 57rem;
+}
+.edit-img-field{
+  padding-top: 1rem;
+}
+
+.edit-input-fields{
+  width: 20rem
+}
+
+.edit-label-fields{
+  font-weight: 700;
 }

@@ -67,6 +67,8 @@ export default function EditProperty(props) {
   };
 
   return (
+    <div className="edit-container-background">
+      <div className='edit-holder'>
     <form
       className="edit-container"
       onSubmit={(e) => {
@@ -74,14 +76,8 @@ export default function EditProperty(props) {
         handleUpdate(id, formData);
       }}
     >
-      <button>SAVE</button>
-      <input
-        placeholder="PROPERTY NAME"
-        type="text"
-        name="name"
-        value={name}
-        onChange={handleChange}
-      />
+          <div className='edit-details-background'>
+          <button className='edit-screen-save'>SAVE</button>
       <div className="edit-details-container">
         <div className="edit-img-container">
           <img className="edit-property-image" src={img_url} alt={name} />
@@ -95,91 +91,113 @@ export default function EditProperty(props) {
             />
           </div>
         </div>
-        <div className="edit-fields">
-          <label>
+              <div className="edit-fields">
+                <label
+                className='edit-label-fields'>
+                  PROPERTY NAME
+          </label>
+                <input
+                  className='edit-input-fields'
+        placeholder="PROPERTY NAME"
+        type="text"
+        name="name"
+        value={name}
+        onChange={handleChange}
+          />
+          <label className='edit-label-fields'>
             MONTHLY RENT
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="integer"
               name="rent"
               value={rent}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             # OF BEDS
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="integer"
               name="beds"
               value={beds}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             # OF BATHS
+          </label>
             <input
+            className='edit-input-fields'
               type="integer"
               name="bath"
               value={bath}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             SQ. FT.
+          </label >
             <input
               type="integer"
               name="sq_ft"
               value={sq_ft}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             ADDRESS
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="text"
               name="address"
               value={address}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             CURRENT TENANT
+          </label>
             <input
               type="text"
               name="current_tenant"
               value={current_tenant}
               onChange={handleChange}
             />
-          </label>
 
-          <label>
+          <label className='edit-label-fields'>
             RENTAL AGREEMENT
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="text"
               name="rental_agreement"
               value={rental_agreement}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             NEXT SCHEDULED MAINTENANCE
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="text"
               name="next_maintenance"
               value={next_maintenance}
               onChange={handleChange}
             />
-          </label>
-          <label>
+          <label className='edit-label-fields'>
             AMENITIES
-            <input
+          </label>
+                <input
+                  className='edit-input-fields'
               type="text"
               name="amenities"
               value={amenities}
               onChange={handleChange}
             />
-          </label>
         </div>
       </div>
+          </div>
     </form>
+      </div>
+    </div>
   );
 }

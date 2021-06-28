@@ -5,7 +5,7 @@ export default function AllTenants(props) {
   const { tenants} = props;
   return (
     <div className='all-tenants-container'>
-        <h1>TENANTS</h1>
+        <h1 className='tenant-top-header'>TENANTS</h1>
       <div className="tenants-container">
         <div className='table-header'>
           <div className='tenant-header'>
@@ -20,12 +20,12 @@ export default function AllTenants(props) {
               <div className="table-container">
                 <div className="tenant-column">
             <Link to={`/tenants/${tenant.id}`}>
-                  <p>{tenant.name}</p>
+                  <h5>{tenant.name}</h5>
             </Link>
                 </div>
               <div className='property-column'>
                 <Link to={`/properties/${tenant.property.id}`}>
-              <p>{tenant.property.name}</p>
+              <h5>{tenant.property.name}</h5>
                 </Link>
                 </div>
               </div>

@@ -10,11 +10,13 @@ export default function AllProperties(props) {
         <h1 className='prop-header'>PROPERTIES</h1>
       </div>
       {properties.map((property) => (
-        <div key={property.id}>
+        <div 
+        key={property.id}>
           <Link
             className="property-container"
             to={`/properties/${property.id}`}
           >
+            <div className='property-cards'>
             <div className="all-property-img">
               <img
                 className="property-img"
@@ -49,9 +51,12 @@ export default function AllProperties(props) {
                 </div>
                 <div className="tenant-container">
                   <p>Tenant:</p>
-                  <p>{property.current_tenant}</p>
+                    {property.tenants.map((tenant) => (
+                      <p>{ tenant.name}</p>
+                    ))}
                 </div>
               </div>
+            </div>
             </div>
           </Link>
         </div>
