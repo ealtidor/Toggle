@@ -19,10 +19,17 @@ setPropertyItem(propertyData)
 
 
   return (
-    <div>
-      <h1>{propertyItem?.name}</h1>
-      <Link to={`/properties/${id}/edit`}>EDIT</Link>
-        <button onClick={()=> handleDelete(propertyItem?.id)}>DELETE</button>
+    <div className='display-prop-background'>
+      <div className='display-header'>
+      <h1 className='display-header-font' >{propertyItem?.name}</h1>
+      </div>
+      <div className='display-prop-container'>
+        <div className='display-grey-background'>
+          <div className='edit-delete-container'>
+      <Link className='display-property-edit' to={`/properties/${id}/edit`}>EDIT</Link>
+        <button className='display-property-delete' onClick={()=> handleDelete(propertyItem?.id)}>DELETE</button>
+          </div>
+      <div className='display-prop'>
       <div className='property-display-container'>
         <img className='display-property-img' src={propertyItem?.img_url} alt='Property' />
         <div className='display details'>
@@ -61,6 +68,9 @@ setPropertyItem(propertyData)
               <p>AMENITIES</p>
               <p>{ propertyItem?.amenities}</p>
             </div>
+        </div>
+      </div>
+      </div>
         </div>
       </div>
     </div>
