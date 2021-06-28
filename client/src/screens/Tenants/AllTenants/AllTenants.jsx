@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function AllTenants(props) {
   const { tenants} = props;
   return (
-    <div>
+    <div className='all-tenants-container'>
         <h1>TENANTS</h1>
       <div className="tenants-container">
         <div className='table-header'>

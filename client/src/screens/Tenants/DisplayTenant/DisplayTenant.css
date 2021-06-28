@@ -1,0 +1,48 @@
+.tenant-display-header{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
+}
+
+.display-property{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.tenant-property-name{
+margin-bottom: 0rem;
+}
+
+.tenant-property-address{
+  margin-top: 0rem;
+}
+
+.address-details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0rem;
+}
+
+.previous-address{
+  margin-bottom: 0rem;
+}
+.display-tenant-details{
+  background-color: rgb(240, 240, 240);
+  padding: 4rem;
+    /* width: 65vh; */
+}
+.subdisplay-tenant-details{
+  background-color: white;
+  padding: 2rem;
+}
+.topdisplay-tenant-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;
+  margin: 5rem;
+}

@@ -1,23 +1,82 @@
-.layout-container{
+.layout-container {
   height: 100%;
 }
-nav {
+.layout-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
   background-color: black;
-color: white;
-height: 20vh;
+  color: white;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+    align-content: center;
 }
-header{
+.desktop-header {
   text-decoration: none;
   text-decoration-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+
 }
 
-.layout-children{
+/* .layout-children {
   height: 100%;
-}
+} */
 
-footer{
+footer {
   background-color: black;
   color: white;
   text-align: left;
-  padding: .1rem .5rem;
+  padding: 0.1rem 0.5rem;
+}
+
+.layout-tenants,
+.layout-properties,
+.layout-login,
+.layout-register {
+  text-decoration: none;
+  color: white;
+  padding-right: 2rem;
+  font-weight: 600;
+}
+
+.layout-username{
+  padding-right: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.layout-header{
+  font-size: 3em;
+}
+
+.layout-logout{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 780px) {
+  .desktop-header{
+  flex-direction: column;
+  padding-bottom: 1rem;
+  align-items: flex-start;
+}
+.layout-nav{
+  padding-left: 2rem;
+}
+
+
+
 }

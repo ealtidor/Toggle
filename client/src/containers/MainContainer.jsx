@@ -91,9 +91,6 @@ export default function MainContainer() {
         <Route path="/tenants">
           <AllTenants tenants={tenants} />
         </Route>
-        <Route path="/">
-          <p>This is home</p>
-        </Route>
       </Switch>
     </div>
   );
