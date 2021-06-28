@@ -121,3 +121,14 @@
   font-size: 2rem;
   font-weight: 600;
 }
+
+.property-tenant-name{
+  text-decoration: none;
+  color: rgb(251, 120, 40);
+  font-weight: 500;
+}
+
+.property-display-subheader{
+  font-weight: 700;
+  margin-bottom: 0rem;
+}

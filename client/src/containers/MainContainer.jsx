@@ -26,7 +26,7 @@ export default function MainContainer() {
   // Get All Properties
   useEffect(() => {
     const fetchProperties = async () => {
-      const propertyList = await getAllProperties();
+      const propertyList = await getAllProperties()
       setProperties(propertyList);
     };
     fetchProperties();
@@ -58,7 +58,7 @@ export default function MainContainer() {
         return property.id === Number(id) ? propertyItem : property;
       })
     );
-    history.push("/properties");
+    history.push("/properties/:id");
   };
 
   // Delete Property

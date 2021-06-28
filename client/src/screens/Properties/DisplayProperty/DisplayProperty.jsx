@@ -1,10 +1,9 @@
 import "./DisplayProperty.css";
-import { useEffect, useState } from "react";
+import { useEffect,} from "react";
 import { useParams, Link } from "react-router-dom";
 import { getOneProperty } from "../../../services/property";
 
 export default function DisplayProperty(props) {
-  // const [propertyItem, setPropertyItem] = useState(null)
   const { id } = useParams();
   const { handleDelete, propertyItem, setPropertyItem } = props;
 
@@ -67,14 +66,17 @@ export default function DisplayProperty(props) {
                 <p>{propertyItem?.address}</p>
                 <div className='overview-bottom-border'></div>
                 <p className='display-overview-header'>OVERVIEW:</p>
-                <p>Current Tenant:</p>
-                {/* <p>{propertyItem?.current_tenant}</p> */}
+                <p className='property-display-subheader'>Current Tenant:</p>
                 {propertyItem?.tenants.map((tenant) => (
+                  <Link
+                  className='property-tenant-name'  
+                    to={`/tenants/${tenant.id}`} key={tenant.id}>
                   <p>{tenant.name}</p>
+                  </Link>
                 ))}
-                <p>Rental Agreement:</p>
+                <p className='property-display-subheader'>Rental Agreement:</p>
                 <p>{propertyItem?.rental_agreement}</p>
-                <p>Next Scheduled Maintenance:</p>
+                <p className='property-display-subheader'>Next Scheduled Maintenance:</p>
                 <p>{propertyItem?.next_maintenance}</p>
                 <p className='display-amenities-header'>AMENITIES</p>
                 <p>{propertyItem?.amenities}</p>

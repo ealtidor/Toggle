@@ -1,12 +1,11 @@
 import './DisplayTenant.css'
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import {getOneTenant} from '../../../services/tenant'
 
 export default function DisplayTenant(props) {
 const [tenantItem, setTenantItem] = useState(null)
   const { id } = useParams()
-  const { handleDelete } = props
   
   useEffect(() => {
     const fetchTenantItem = async () => {
