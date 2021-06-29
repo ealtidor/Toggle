@@ -13,6 +13,7 @@ export default function DisplayProperty(props) {
       setPropertyItem(propertyData);
     };
     fetchPropertyItem();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (
