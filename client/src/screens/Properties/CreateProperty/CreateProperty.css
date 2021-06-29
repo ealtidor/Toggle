@@ -1,9 +1,82 @@
+.create-details-background{
+  background: url(https://images.unsplash.com/photo-1524813686514-a57563d77965?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmVpZ2hib3Job29kfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.create-container{
+ 
+}
+
 .create-details-container{
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 64rem;
+    padding: 4rem;
 }
 
 .create-fields{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding-left: 3rem;
+}
+
+.create-details-holder{
+  display: flex;
+    justify-content: center;
+}
+
+.create-input-fields{
+  width: 20rem;
+  margin-bottom: 1rem;
+}
+
+.create-img-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.create-property-img{
+  width: 28rem;
+    height: 28rem;
+    margin-bottom: 1rem;
+}
+
+.create-label-fields{
+  font-weight: 700;
+}
+
+.create-save-background{
+  background-color: rgb(240, 240, 240);
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  padding: 4rem 7rem 7rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 78rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.create-screen-save{
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: 600; 
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+    padding-left: 57rem;
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DropdownButton  from "react-bootstrap/DropdownButton";
+import { DropdownButton, Dropdown }  from "react-bootstrap";
 
 
 export default function Layout(props) {
@@ -39,7 +39,7 @@ export default function Layout(props) {
             </>
           )}
         </header>
-        {/* <div className='mobile-header'>
+        <div className='mobile-header'>
         <DropdownButton
           align="end"
           title="Dropdown right"
@@ -51,7 +51,7 @@ export default function Layout(props) {
           <Dropdown.Divider />
           <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
         </DropdownButton>
-        </div> */}
+        </div>
       </nav>
       <div className="layout-children" >{props.children}</div>
       <footer>
