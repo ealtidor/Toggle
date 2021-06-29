@@ -2,8 +2,7 @@ import "./Layout.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
