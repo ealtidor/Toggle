@@ -34,7 +34,7 @@ flex-direction: column;
   flex-direction: row; 
   box-shadow: 1px 2px 0px black;
   border: 1px solid black;
-
+  height: 19rem;
 }
 
 .orange-container {
@@ -57,14 +57,14 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
   padding: 3rem;
-  height: 10.5rem;
+  height: 3rem;
   align-items: center;
-  width: 40rem;
+  width: 36rem;
 }
 
 .property-img {
   width: 18.5rem;
-  height: 18.5rem;
+  height: 19rem;
 }
 
 .prop-address-name {
@@ -120,4 +120,11 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .orange-container {
+    background-color: rgb(150, 150, 150);
+  }
+
 }
