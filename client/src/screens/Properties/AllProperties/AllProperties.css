@@ -1,10 +1,12 @@
 .allprops-container {
- 
   background: url(https://images.unsplash.com/photo-1524813686514-a57563d77965?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmVpZ2hib3Job29kfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+display: flex;
+justify-content: center;
+flex-direction: column;
 }
 
 .all-property-header {
@@ -112,4 +114,10 @@
 
 .tenant-container{
   width:9rem;
+}
+
+.createproperty{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }

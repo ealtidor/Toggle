@@ -1,0 +1,37 @@
+.tenant-create-form{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+  margin-top: 7rem;
+  padding: 8rem 7rem 13rem;
+  height: 46rem;
+}
+.tenant-create-formcontainer{
+  display: flex;
+  justify-content: center;
+margin-top: 7rem;
+margin-bottom: 7rem;
+height: 53.5rem
+
+}
+
+.create-tenant-inputs{
+  width: 20rem;
+}
+
+.create-tenant-label{
+  font-weight: 700;
+}
+
+.create-tenant-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 35rem;
+  height: 35rem;
+  padding: 5rem 7rem 7rem;
+  background-color: white
+}

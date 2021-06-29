@@ -8,9 +8,6 @@
   display: flex;
   justify-content: center;
 }
-.create-container{
- 
-}
 
 .create-details-container{
   display: flex;
@@ -79,4 +76,10 @@
   margin-left: 1rem;
   padding-bottom: 1rem;
     padding-left: 57rem;
+}
+
+.create-tenant-link{
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(251, 120, 40);
 }

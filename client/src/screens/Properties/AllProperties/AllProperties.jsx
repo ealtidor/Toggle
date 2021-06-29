@@ -61,7 +61,8 @@ export default function AllProperties(props) {
           </Link>
         </div>
       ))}
-      <Link to="/properties/new">
+      <Link className='createproperty'
+        to="/properties/new">
         <button className='prop-button'>+ Property</button>
       </Link>
     </div>
