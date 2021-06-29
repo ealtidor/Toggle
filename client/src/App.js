@@ -47,11 +47,11 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
+          <Route exact path="/">
+            <Register handleRegister={handleRegister} />
+          </Route>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
-          </Route>
-          <Route path="/register">
-            <Register handleRegister={handleRegister} />
           </Route>
           <Route path="/">
             <MainContainer />
