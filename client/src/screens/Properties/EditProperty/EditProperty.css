@@ -83,3 +83,14 @@
 }
   
 }
+
+@media only screen and (max-width: 380px) {
+  .edit-details-background {
+    background-color: black;
+    
+  }
+
+  .edit-screen-save{
+    color: white;
+  }
+}

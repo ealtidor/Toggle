@@ -144,6 +144,13 @@
   .display-property-img{
     width: 31rem;
   }
+}
 
+@media only screen and (max-width: 380px) {
   
+
+  .display-header {
+    background-color: rgba(150, 150, 150, 0.7);
+  
+  }
 }
