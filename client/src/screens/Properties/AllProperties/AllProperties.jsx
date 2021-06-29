@@ -11,7 +11,7 @@ export default function AllProperties(props) {
       </div>
       {properties.map((property) => (
         <div 
-        key={property.id}>
+        key={`${property.id}-${Math.random()}`}>
           <Link
             className="property-container"
             to={`/properties/${property.id}`}
