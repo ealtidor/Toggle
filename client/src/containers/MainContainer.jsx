@@ -7,6 +7,7 @@ import DisplayProperty from "../screens/Properties/DisplayProperty/DisplayProper
 import EditProperty from "../screens/Properties/EditProperty/EditProperty";
 import AllTenants from "../screens/Tenants/AllTenants/AllTenants";
 import DisplayTenant from "../screens/Tenants/DisplayTenant/DisplayTenant";
+import CreateTenant from "../screens/Tenants/CreateTenant/CreateTenant";
 
 // Services
 import {
@@ -15,18 +16,18 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants } from "../services/tenant";
+import { getAllTenants, postTenant} from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
   const [tenants, setTenants] = useState([]);
-  const [propertyItem, setPropertyItem] = useState(null)
+  const [propertyItem, setPropertyItem] = useState(null);
   const history = useHistory();
 
   // Get All Properties
   useEffect(() => {
     const fetchProperties = async () => {
-      const propertyList = await getAllProperties()
+      const propertyList = await getAllProperties();
       setProperties(propertyList);
     };
     fetchProperties();
@@ -48,7 +49,13 @@ export default function MainContainer() {
     history.push("/properties");
   };
 
-  // Create a Tenant
+  // // Create a Tenant
+  const handleTenantCreate = async (id, formData) => {
+    const tenantItem = await postTenant(id, formData);
+    console.log({ tenantItem });
+    setTenants((prevState) => [...prevState, tenantItem]);
+    // history.push(`/properties/${id}`)
+  };
 
   // Update Property
   const handleUpdate = async (id, formData) => {
@@ -73,6 +80,9 @@ export default function MainContainer() {
   return (
     <div>
       <Switch>
+        <Route path="/properties/:id/tenants/new">
+          <CreateTenant handleTenantCreate={handleTenantCreate} />
+        </Route>
         <Route path="/properties/:id/edit">
           <EditProperty properties={properties} handleUpdate={handleUpdate} />
         </Route>
@@ -80,7 +90,11 @@ export default function MainContainer() {
           <CreateProperty handleCreate={handleCreate} />
         </Route>
         <Route path="/properties/:id">
-          <DisplayProperty handleDelete={handleDelete} setPropertyItem={setPropertyItem} propertyItem={propertyItem}/>
+          <DisplayProperty
+            handleDelete={handleDelete}
+            setPropertyItem={setPropertyItem}
+            propertyItem={propertyItem}
+          />
         </Route>
         <Route path="/properties">
           <AllProperties properties={properties} />
