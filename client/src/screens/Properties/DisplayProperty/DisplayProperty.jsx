@@ -68,7 +68,7 @@ export default function DisplayProperty(props) {
                 <div className="overview-bottom-border"></div>
                 <p className="display-overview-header">OVERVIEW:</p>
                 <p className="property-display-subheader">Current Tenant:</p>
-                {propertyItem?.tenants.map((tenant) => (
+                {propertyItem?.tenants?.map((tenant) => (
                   <Link
                     className="property-tenant-name"
                     to={`/tenants/${tenant.id}`}

@@ -67,6 +67,8 @@ export default function EditProperty(props) {
     }));
   };
 
+  
+
   return (
     <div className="edit-container-background">
       <div className='edit-holder'>

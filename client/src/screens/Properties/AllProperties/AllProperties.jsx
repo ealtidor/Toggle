@@ -51,7 +51,7 @@ export default function AllProperties(props) {
                 </div>
                 <div className="tenant-container">
                   <p>Tenant:</p>
-                    {property.tenants.map((tenant) => (
+                    {property.tenants?.map((tenant) => (
                       <p>{ tenant.name}</p>
                     ))}
                 </div>

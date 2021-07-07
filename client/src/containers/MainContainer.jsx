@@ -65,7 +65,7 @@ export default function MainContainer() {
         return property.id === Number(id) ? propertyItem : property;
       })
     );
-    history.push("/properties/:id");
+    history.push(`/properties/${id}`);
   };
 
   // Delete Property
