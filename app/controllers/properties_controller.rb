@@ -19,7 +19,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
 @property.user = @current_user
     if @property.save
-      render json: @property, status: :created
+      render json: @property, status: :created, include: :tenants
     else
       render json: @property.errors, status: :unprocessable_entity
     end
