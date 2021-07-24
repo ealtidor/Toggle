@@ -52,9 +52,8 @@ export default function MainContainer() {
   // // Create a Tenant
   const handleTenantCreate = async (id, formData) => {
     const tenantItem = await postTenant(id, formData);
-    console.log({ tenantItem });
     setTenants((prevState) => [...prevState, tenantItem]);
-    // history.push(`/properties/${id}`)
+    history.push(`/properties/${id}`)
   };
 
   // Update Property

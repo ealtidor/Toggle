@@ -9,6 +9,7 @@ export default function CreateTenant(props) {
     previous_address: '',
     city: '',
     state: '',
+    zip_code: '',
     email: '',
     primary_number: '',
     alt_number: '',
@@ -20,6 +21,7 @@ export default function CreateTenant(props) {
     previous_address,
     city,
     state,
+    zip_code,
     email,
     primary_number,
     alt_number,
@@ -84,6 +86,14 @@ export default function CreateTenant(props) {
           type='text'
           name='state'
           value={state}
+          onChange={handleChange}
+            />
+             <label className='create-tenant-label'>ZIP CODE:</label>
+          <input
+            className='create-tenant-inputs'
+          type='text'
+          name='zip_code'
+          value={zip_code}
           onChange={handleChange}
         />
          <label className='create-tenant-label'>EMAIL:</label>

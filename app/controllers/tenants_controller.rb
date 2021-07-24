@@ -11,7 +11,6 @@ class TenantsController < ApplicationController
 
   # GET /tenants/1
   def show
-    # @property = Property.find(@tenant.property_id)
     render json: @tenant, include: :property
   end
 

@@ -10,9 +10,14 @@ export const getOneTenant = async (id) => {
   return resp.data 
 }
 
-export const postTenant = async (tenantData) => {
-  const resp = await api.post('/tenants', { tenant: tenantData });
-  return resp.data
+export const postTenant = async (id, tenantData) => {
+  try {
+    const resp = await api.post(`/properties/${id}/tenants`, { tenant: tenantData });
+    return resp.data
+  } catch (error) {
+    throw(error)
+  }
+
 }
 
 export const putTenant = async (id, tenantData) => {
