@@ -58,6 +58,9 @@ function App() {
           </Route>
         </Switch>
       </Layout>
+      <footer>
+    <p>© Emanuella Altidor, 2021</p>
+  </footer>
     </div>
   );
 }
