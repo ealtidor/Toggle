@@ -125,8 +125,8 @@ export default function CreateProperty(props) {
                 {/* <input
                 className='create-input-fields'
               type="text"
-              name="current_tenant"
-              value={current_tenant}
+              name="tenants.name"
+              value={tenants.name}
               onChange={handleChange}
             /> */}
                 <Link

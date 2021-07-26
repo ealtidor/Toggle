@@ -68,6 +68,17 @@ export default function MainContainer() {
     history.push(`/properties/${id}`);
   };
 
+  // Update Tenant
+  const handleTenantUpdate = async (id, formData) => {
+    const tenantItem = await putTenant(id, formData);
+    setTenants((prevState) =>
+      prevState.map((tenant) => {
+        return tenant.id === Number(id) ? tenantItem : tenant;
+      })
+    );
+    history.push("/properties/:id");
+  };
+
   // Delete Property
   const handleDelete = async (id) => {
     await deleteProperty(id);
@@ -84,10 +95,17 @@ export default function MainContainer() {
           <CreateTenant handleTenantCreate={handleTenantCreate} />
         </Route>
         <Route path="/properties/:id/edit">
-          <EditProperty properties={properties} handleUpdate={handleUpdate} />
+          <EditProperty
+            properties={properties}
+            handleUpdate={handleUpdate}
+            handleTenantUpdate={handleTenantUpdate}
+          />
         </Route>
         <Route path="/properties/new">
-          <CreateProperty handleCreate={handleCreate} />
+          <CreateProperty
+            handleCreate={handleCreate}
+            handleTenantCreate={handleTenantCreate}
+          />
         </Route>
         <Route path="/properties/:id">
           <DisplayProperty
