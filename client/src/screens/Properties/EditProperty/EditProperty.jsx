@@ -58,6 +58,7 @@ export default function EditProperty(props) {
     if (properties.length) {
       prefillFormData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [properties]);
 
   const handleChange = (e) => {
@@ -67,6 +68,8 @@ export default function EditProperty(props) {
       [name]: value,
     }));
   };
+
+  
 
   return (
     <div className="edit-container-background">

@@ -63,3 +63,34 @@
 .edit-label-fields{
   font-weight: 700;
 }
+
+@media only screen and (max-width: 780px) {
+  .edit-details-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .display-property-img{
+    width: 31rem;
+  }
+.edit-img-field{
+  margin-bottom: 1rem;
+}
+.edit-container-background{
+  height: 134rem;
+}
+  
+}
+
+@media only screen and (max-width: 380px) {
+  .edit-details-background {
+    background-color: black;
+    
+  }
+
+  .edit-screen-save{
+    color: white;
+  }
+}

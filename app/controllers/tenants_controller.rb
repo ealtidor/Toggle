@@ -17,8 +17,9 @@ class TenantsController < ApplicationController
 
   # POST /tenants
   def create
-    @tenant = Tenant.new(tenant_params)
-@tenant.user = @current_user
+    @property = Property.find(params[:property_id])
+    @tenant = Tenant.where(property_id: @property.id).new(tenant_params)
+    
     if @tenant.save
       render json: @tenant, status: :created
     else

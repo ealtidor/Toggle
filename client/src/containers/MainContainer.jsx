@@ -7,6 +7,7 @@ import DisplayProperty from "../screens/Properties/DisplayProperty/DisplayProper
 import EditProperty from "../screens/Properties/EditProperty/EditProperty";
 import AllTenants from "../screens/Tenants/AllTenants/AllTenants";
 import DisplayTenant from "../screens/Tenants/DisplayTenant/DisplayTenant";
+import CreateTenant from "../screens/Tenants/CreateTenant/CreateTenant";
 
 // Services
 import {
@@ -15,7 +16,7 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants, postTenant, putTenant } from "../services/tenant";
+import { getAllTenants, postTenant} from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
@@ -48,10 +49,12 @@ export default function MainContainer() {
     history.push("/properties");
   };
 
-  // Create a Tenant
-  const handleTenantCreate = async (formData) => {
-    const tenantItem = await postTenant(formData);
+  // // Create a Tenant
+  const handleTenantCreate = async (id, formData) => {
+    const tenantItem = await postTenant(id, formData);
+    console.log({ tenantItem });
     setTenants((prevState) => [...prevState, tenantItem]);
+    // history.push(`/properties/${id}`)
   };
 
   // Update Property
@@ -62,7 +65,7 @@ export default function MainContainer() {
         return property.id === Number(id) ? propertyItem : property;
       })
     );
-    history.push("/properties/:id");
+    history.push(`/properties/${id}`);
   };
 
   // Update Tenant
@@ -88,6 +91,9 @@ export default function MainContainer() {
   return (
     <div>
       <Switch>
+        <Route path="/properties/:id/tenants/new">
+          <CreateTenant handleTenantCreate={handleTenantCreate} />
+        </Route>
         <Route path="/properties/:id/edit">
           <EditProperty
             properties={properties}

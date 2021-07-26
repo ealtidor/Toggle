@@ -1,5 +1,7 @@
 #  Toggle
 
+https://yielding-zoo.surge.sh/
+
 > The purpose of this web application is to provide real estate investors a quick and easy way to manage their properties. Investors typically spend about 10% or more of their earnings with property managers to avoid spending time managing multiple listings and tenants. Toggle provides users the ability to store all of their properties and tenants in one central location that can be accessed anywhere at anytime. Users can manage multiple listings, maintain tenant profiles, and keep track of scheduled maintenance all in one application. Using Toggle will save investors time and money, which will provide them the ability to continue to scale their business.
 
 ## MVP
@@ -62,21 +64,21 @@
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Models    |    H     |     1 hrs      |      TBD     |    TBD    |
-| Seed Data and Build Routes |    H     |     3 hrs      |     TBD     |     TBD     |
-| Test Routes |    H     |     .5 hrs      |     TBD     |     TBD     |
-| Set Up Cors |    H     |     .5 hrs      |    TBD     |     TBD     |
-| Create Controller Files |    H     |     3 hrs      |     TBD     |     TBD     |
-| Test API |    H     |     1 hrs      |     TBD     |     TBD     |
-| Create React App and Clear Boilerplate |    H     |     2 hrs      |     TBD     |     TBD     |
-| Create File Structure |    H     |     1 hrs      |     TBD     |     TBD     |
-| Complete Screen, Components and Connections |    H     |     10 hrs      |     TBD     |     TBD     |
-| CSS Styling |    H     |     10 hrs      |     TBD     |     TBD     |
-| Create Responsive Design |    H     |     4 hrs      |     TBD     |     TBD     |
-| Deploy to Production |    H     |     1 hrs      |     TBD     |     TBD     |
-| Review App Funcationality for Bugs |    H     |     1 hrs      |     TBD     |     TBD     |
-| Presenatation Review |    H     |     2hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     40 hrs      |     TBD     |     TBD     |
+| Create Models    |    H     |     1 hrs      |      1hrs     |    1hrs    |
+| Seed Data and Build Routes |    H     |     3 hrs      |     3hrs     |     3hrs     |
+| Test Routes |    H     |     .5 hrs      |     2hrs     |     2hrs     |
+| Set Up Cors |    H     |     .5 hrs      |    .5hrs     |     .5hrs     |
+| Create Controller Files |    H     |     3 hrs      |     3hrs     |     3hrs     |
+| Test API |    H     |     1 hrs      |     1hrs     |     1hrs     |
+| Create React App and Clear Boilerplate |    H     |     2 hrs      |     .5hrs     |     .5hrs     |
+| Create File Structure |    H     |     1 hr      |     1hr     |     1hr     |
+| Complete Screen, Components and Connections |    H     |     10 hrs      |     12hrs     |     12hrs     |
+| CSS Styling |    H     |     10 hrs      |     10 hrs      |     10 hrs      |
+| Create Responsive Design |    H     |     4 hrs      |     4hrs     |     4hrs     |
+| Deploy to Production |    H     |     1 hrs      |     2 hrs     |     2 hrs     |
+| Review App Funcationality for Bugs |    H     |     1 hrs      |     1hr     |     1hr     |
+| Presenatation Review |    H     |     2hrs      |     1hr     |     1hr     |
+| TOTAL               |          |     40 hrs      |     45 hrs     |     45 hrs     |
 
 
 
@@ -90,9 +92,21 @@
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> Mapped through a nested array in order to capture the tenant name associated with the property.  
 
+
+```
+{propertyItem?.tenants.map((tenant) => (
+                  <Link
+                    className="property-tenant-name"
+                    to={`/tenants/${tenant.id}`}
+                    key={tenant.id}
+                  >
+                    <p>{tenant.name}</p>
+                  </Link>
+                ))}
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> Needed to access the tenant table in my DisplayProperty screen to render the name of the tenant associated with the property that was selected. On the backend I was able to update my controller with "include: :tenant" and was able to access the tenant table as a nested array.

@@ -25,9 +25,6 @@
 
 }
 
-.layout-children {
-  height: 100%;
-}
 
 footer {
   background-color: black;
@@ -50,6 +47,7 @@ footer {
   padding-right: 2rem;
   font-weight: 600;
   margin-bottom: 0;
+  margin-top: 0rem;
 }
 
 .layout-header{
@@ -69,9 +67,10 @@ footer {
 
 @media only screen and (max-width: 780px) {
   .desktop-header{
-  flex-direction: column;
+  /* flex-direction: column; */
   padding-bottom: 1rem;
   align-items: flex-start;
+  /* display:none */
 }
 .layout-nav{
   padding-left: 2rem;

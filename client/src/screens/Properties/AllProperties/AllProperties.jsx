@@ -11,7 +11,7 @@ export default function AllProperties(props) {
       </div>
       {properties.map((property) => (
         <div 
-        key={property.id}>
+        key={`${property.id}-${Math.random()}`}>
           <Link
             className="property-container"
             to={`/properties/${property.id}`}
@@ -51,7 +51,7 @@ export default function AllProperties(props) {
                 </div>
                 <div className="tenant-container">
                   <p>Tenant:</p>
-                    {property.tenants.map((tenant) => (
+                    {property.tenants?.map((tenant) => (
                       <p>{ tenant.name}</p>
                     ))}
                 </div>
@@ -61,7 +61,8 @@ export default function AllProperties(props) {
           </Link>
         </div>
       ))}
-      <Link to="/properties/new">
+      <Link className='createproperty'
+        to="/properties/new">
         <button className='prop-button'>+ Property</button>
       </Link>
     </div>

@@ -132,3 +132,25 @@
   font-weight: 700;
   margin-bottom: 0rem;
 }
+
+@media only screen and (max-width: 780px) {
+  .property-display-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .display-property-img{
+    width: 31rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  
+
+  .display-header {
+    background-color: rgba(150, 150, 150, 0.7);
+  
+  }
+}
