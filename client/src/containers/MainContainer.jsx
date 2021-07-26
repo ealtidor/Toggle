@@ -16,7 +16,7 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants, postTenant} from "../services/tenant";
+import { getAllTenants, postTenant, putTenant} from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
