@@ -9,7 +9,15 @@ export default function Layout(props) {
   return (
     <div className="layout-container">
       <nav className="layout-nav">
-        <h1 className="layout-header">TOGGLE</h1>
+        <h1 className="layout-header">
+          {currentUser ? (
+            <>
+            <Link className='layout-toogle' to='/properties'>TOGGLE </Link>
+              </>
+          ) : (
+              <Link className='layout-toogle' to='/' >TOGGLE</Link>
+          )}
+          </h1>
         <header className="desktop-header">
           {currentUser ? (
             <>
@@ -31,7 +39,7 @@ export default function Layout(props) {
               <Link className="layout-login" to="/login">
                 LOGIN
               </Link>
-              <Link className="layout-register" to="/register">
+              <Link className="layout-register" to="/">
                 REGISTER
               </Link>
             </>

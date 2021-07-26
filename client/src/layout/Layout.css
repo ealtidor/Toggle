@@ -43,6 +43,11 @@ footer {
   font-weight: 600;
 }
 
+.layout-toogle{
+  text-decoration: none;
+  color: white;
+}
+
 .layout-username{
   padding-right: 2rem;
   font-weight: 600;
