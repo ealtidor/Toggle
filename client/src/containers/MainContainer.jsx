@@ -8,6 +8,7 @@ import EditProperty from "../screens/Properties/EditProperty/EditProperty";
 import AllTenants from "../screens/Tenants/AllTenants/AllTenants";
 import DisplayTenant from "../screens/Tenants/DisplayTenant/DisplayTenant";
 import CreateTenant from "../screens/Tenants/CreateTenant/CreateTenant";
+import EditTenant from "../screens/Tenants/EditTenant/EditTenant";
 
 // Services
 import {
@@ -17,6 +18,8 @@ import {
   putProperty,
 } from "../services/property";
 import { getAllTenants, postTenant, putTenant} from "../services/tenant";
+
+
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
@@ -76,7 +79,7 @@ export default function MainContainer() {
         return tenant.id === Number(id) ? tenantItem : tenant;
       })
     );
-    history.push("/properties/:id");
+    history.push(`/tenants/${id}`);
   };
 
   // Delete Property
