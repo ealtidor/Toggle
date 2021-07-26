@@ -33,7 +33,7 @@ export default function EditProperty(props) {
     img_url,
   } = formData;
 
-  const { properties, handleUpdate, handleTenantUpdate } = props;
+  const { properties, handleUpdate} = props;
   const { id } = useParams();
 
   useEffect(() => {

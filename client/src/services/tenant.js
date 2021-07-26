@@ -10,8 +10,8 @@ export const getOneTenant = async (id) => {
   return resp.data
 };
 
-export const postTenant = async (tenantData) => {
-  const resp = await api.post('/tenants', { tenant: tenantData });
+export const postTenant = async (id, tenantData) => {
+  const resp = await api.post(`/properties/${id}/tenants`, { tenant: tenantData });
   return resp.data
 };
 

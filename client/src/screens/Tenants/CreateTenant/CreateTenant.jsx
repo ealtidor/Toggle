@@ -13,6 +13,7 @@ export default function CreateTenant(props) {
     primary_number: '',
     alt_number: '',
     preferred_contact: '',
+    zip_code:'',
   })
   
   const {
@@ -21,6 +22,7 @@ export default function CreateTenant(props) {
     city,
     state,
     email,
+    zip_code,
     primary_number,
     alt_number,
     preferred_contact,
@@ -42,7 +44,6 @@ export default function CreateTenant(props) {
   return (
     <div >
       <div className='tenant-create-formcontainer'>
-
       <form
         className='tenant-create-form'
         onSubmit={(e) => {
@@ -84,6 +85,14 @@ export default function CreateTenant(props) {
           type='text'
           name='state'
           value={state}
+          onChange={handleChange}
+            />
+             <label className='create-tenant-label'>ZIP CODE:</label>
+          <input
+            className='create-tenant-inputs'
+          type='text'
+          name='zip_code'
+          value={zip_code}
           onChange={handleChange}
         />
          <label className='create-tenant-label'>EMAIL:</label>

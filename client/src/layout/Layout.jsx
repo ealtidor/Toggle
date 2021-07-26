@@ -47,9 +47,7 @@ export default function Layout(props) {
         </header>
       </nav>
       <div className="layout-children">{props.children}</div>
-      <footer>
-        <p>© Emanuella Altidor, 2021</p>
-      </footer>
+      
     </div>
   );
 }

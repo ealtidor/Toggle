@@ -54,7 +54,7 @@ export default function MainContainer() {
     const tenantItem = await postTenant(id, formData);
     console.log({ tenantItem });
     setTenants((prevState) => [...prevState, tenantItem]);
-    // history.push(`/properties/${id}`)
+    history.push(`/properties/${id}`)
   };
 
   // Update Property
@@ -115,7 +115,7 @@ export default function MainContainer() {
           />
         </Route>
         <Route path="/properties">
-          <AllProperties properties={properties} />
+          <AllProperties properties={properties} handleCreate={handleCreate}/>
         </Route>
         <Route path="/tenants/:id">
           <DisplayTenant handleDelete={handleDelete} />
