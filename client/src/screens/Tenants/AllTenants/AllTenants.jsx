@@ -15,7 +15,7 @@ export default function AllTenants(props) {
 <h3>PROPERTY</h3>
           </div>
         </div>
-        {tenants.map((tenant) => (
+        {tenants?.map((tenant) => (
           <div className="tenant-list" key={tenant.id}>
               <div className="table-container">
                 <div className="tenant-column">

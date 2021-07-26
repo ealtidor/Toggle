@@ -1,10 +1,10 @@
 import "./AllProperties.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AllProperties(props) {
   const { properties } = props;
 
-  const { id } = useParams();
+  
 
   return (
     <div className="allprops-container">
