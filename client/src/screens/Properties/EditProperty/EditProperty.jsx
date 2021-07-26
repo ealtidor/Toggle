@@ -17,7 +17,7 @@ export default function EditProperty(props) {
     img_url: "",
     tenants_attributes: [{ name: '' }]
   });
-  // const [tenantFormData, setTenantFormData]
+  
 
   const {
     name,

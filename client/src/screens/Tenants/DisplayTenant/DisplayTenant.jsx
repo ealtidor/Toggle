@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import {getOneTenant} from '../../../services/tenant'
 
-export default function DisplayTenant(props) {
+export default function DisplayTenant() {
 const [tenantItem, setTenantItem] = useState(null)
   const { id } = useParams()
   

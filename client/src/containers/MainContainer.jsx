@@ -94,11 +94,17 @@ export default function MainContainer() {
         <Route path="/properties/:id/tenants/new">
           <CreateTenant handleTenantCreate={handleTenantCreate} />
         </Route>
+        <Route path="/tenants/:id/edit">
+          <EditTenant
+            tenants={tenants}
+            handleTenantUpdate={handleTenantUpdate}
+          />
+        </Route>
         <Route path="/properties/:id/edit">
           <EditProperty
             properties={properties}
             handleUpdate={handleUpdate}
-            handleTenantUpdate={handleTenantUpdate}
+            
           />
         </Route>
         <Route path="/properties/new">
