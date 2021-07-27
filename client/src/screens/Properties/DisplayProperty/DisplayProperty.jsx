@@ -24,6 +24,9 @@ export default function DisplayProperty(props) {
       <div className="display-prop-container">
         <div className="display-grey-background">
           <div className="edit-delete-container">
+                <Link
+                  className="display-property-delete"
+                  to={`/properties/${id}/tenants/new`}>ADD TENANT</Link>
             <Link
               className="display-property-edit"
               to={`/properties/${id}/edit`}

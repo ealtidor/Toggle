@@ -1,11 +1,12 @@
 import './DisplayTenant.css'
 import { useEffect, useState } from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams,Link} from 'react-router-dom'
 import {getOneTenant} from '../../../services/tenant'
 
 export default function DisplayTenant(props) {
 const [tenantItem, setTenantItem] = useState(null)
   const { id } = useParams()
+  const { handleDelete } = props
   
   useEffect(() => {
     const fetchTenantItem = async () => {
@@ -30,7 +31,22 @@ const [tenantItem, setTenantItem] = useState(null)
       </div>
       <div className="topdisplay-tenant-details">
 
-      <div className="display-tenant-details">
+        <div className="display-tenant-details">
+        <div className="edit-delete-container">
+              
+            <Link
+              className="display-property-edit"
+              to={`/tenants/${id}/edit`}
+            >
+              EDIT
+            </Link>
+            <button
+              className="display-property-delete"
+              onClick={() => handleDelete(tenantItem?.id)}
+            >
+              DELETE
+            </button>
+            </div>
         <div className='subdisplay-tenant-details'>
         <div className='previous-address-container'>
         <p className='edit-tenant-subheader'>PREVIOUS ADDRESS:</p>

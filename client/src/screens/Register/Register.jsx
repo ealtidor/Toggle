@@ -71,6 +71,7 @@ export default function Register(props) {
           <button className="register-button">SUBMIT</button>
         </form>
       </div>
+    
     </div>
   );
 }

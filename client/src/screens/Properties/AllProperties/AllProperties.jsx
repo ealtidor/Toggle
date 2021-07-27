@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export default function AllProperties(props) {
   const { properties } = props;
 
+  
+
   return (
     <div className="allprops-container">
       <div className="all-property-header">
@@ -52,7 +54,7 @@ export default function AllProperties(props) {
                 <div className="tenant-container">
                   <p>Tenant:</p>
                     {property.tenants?.map((tenant) => (
-                      <p>{ tenant.name}</p>
+                      <p key={`${tenant.id}-${Math.random()}`}>{ tenant.name}</p>
                     ))}
                 </div>
               </div>
