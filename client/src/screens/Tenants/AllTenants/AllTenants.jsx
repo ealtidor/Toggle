@@ -9,10 +9,10 @@ export default function AllTenants(props) {
       <div className="tenants-container">
         <div className='table-header'>
           <div className='tenant-header'>
-<h3>TENANTS</h3>
+<h3 className='header-text'>TENANTS</h3>
           </div>
           <div className='property-header'>
-<h3>PROPERTY</h3>
+<h3 className='header-text'>PROPERTY</h3>
           </div>
         </div>
         {tenants?.map((tenant) => (

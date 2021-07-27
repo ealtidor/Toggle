@@ -1,4 +1,8 @@
 import "./App.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Layout from "./layout/Layout";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Login from "./screens/Login/Login";
@@ -11,6 +15,8 @@ import {
   removeToken,
 } from "./services/auth";
 import MainContainer from "./containers/MainContainer";
+
+library.add(fab, faGithub, faLinkedin)
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -59,7 +65,13 @@ function App() {
         </Switch>
       </Layout>
       <footer>
-    <p>© Emanuella Altidor, 2021</p>
+        <p className='.footer'>© Emanuella Altidor, 2021</p>
+        <div className='social-links'>
+      <a className='social' href='https://github.com/ealtidor'>
+      <FontAwesomeIcon icon={faGithub} />
+      </a>
+      <a className='social' href='https://www.linkedin.com/in/emanuellaaltidor-mba/'><FontAwesomeIcon icon={faLinkedin} /></a>
+      </div>
   </footer>
     </div>
   );
