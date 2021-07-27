@@ -17,7 +17,7 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants, postTenant, putTenant } from "../services/tenant";
+import { getAllTenants, postTenant, putTenant, deleteTenant } from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
@@ -89,6 +89,15 @@ export default function MainContainer() {
     history.push("/properties");
   };
 
+  // Delete Tenant
+  const handleTenantDelete = async (id) => {
+    await deleteTenant(id);
+    setTenants((prevState) =>
+      prevState.filter((tenant) => tenant.id !== id)
+    );
+    history.push("/tenants");
+  };
+
   return (
     <div>
       <Switch>
@@ -125,7 +134,7 @@ export default function MainContainer() {
           />
         </Route>
         <Route path="/tenants/:id">
-          <DisplayTenant handleDelete={handleDelete} />
+          <DisplayTenant handleTenantDelete={handleTenantDelete} />
         </Route>
         <Route path="/tenants">
           <AllTenants tenants={tenants} />

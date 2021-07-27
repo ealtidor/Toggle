@@ -62,16 +62,16 @@ export default function EditTenant(props) {
 
   return (
     <div >
-      <div className='tenant-create-formcontainer'>
+      <div className='tenant-edit-formcontainer'>
       <form
-        className='tenant-create-form'
+        className='tenant-edit-form'
         onSubmit={(e) => {
           e.preventDefault()
           handleTenantUpdate (id, formData)
       }}
         >
-          <button className='create-screen-save'>SAVE</button>
-          <div className='create-tenant-details'>
+          <button className='edit-screen-save'>SAVE</button>
+          <div className='edit-tenant-details'>
           <label
             className='create-tenant-label' >NAME:</label>
           <input

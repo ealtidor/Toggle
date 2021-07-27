@@ -38,7 +38,7 @@ margin-bottom: 0rem;
 }
 .display-tenant-details{
   background-color: rgb(240, 240, 240);
-  padding: 4rem;
+  padding: 0rem 4rem 4rem;
 
 }
 .subdisplay-tenant-details{
@@ -62,4 +62,9 @@ margin-bottom: 0rem;
 .edit-tenant-subheader{
 margin-bottom: 0rem;
 font-weight: 700;
+}
+
+.edit-delete-container{
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
