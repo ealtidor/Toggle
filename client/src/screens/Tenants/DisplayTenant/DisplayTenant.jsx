@@ -6,7 +6,7 @@ import {getOneTenant} from '../../../services/tenant'
 export default function DisplayTenant(props) {
 const [tenantItem, setTenantItem] = useState(null)
   const { id } = useParams()
-  const { handleDelete } = props
+  const { handleTenantDelete } = props
   
   useEffect(() => {
     const fetchTenantItem = async () => {
@@ -42,7 +42,7 @@ const [tenantItem, setTenantItem] = useState(null)
             </Link>
             <button
               className="display-property-delete"
-              onClick={() => handleDelete(tenantItem?.id)}
+              onClick={() => handleTenantDelete(tenantItem?.id)}
             >
               DELETE
             </button>
