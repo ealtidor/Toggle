@@ -19,6 +19,7 @@ height: 53.5rem
 
 .create-tenant-inputs{
   width: 20rem;
+  margin-bottom: 1rem;
 }
 
 .create-tenant-label{
