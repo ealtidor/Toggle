@@ -29,10 +29,10 @@
 
 .display-prop {
   background-color: white;
-    width: 56rem;
+    /* width: 56rem; */
     margin: 1rem 5rem 5rem;
     padding: 2rem 0rem;
-    height: 34rem;
+    /* height: 34rem; */
 }
 .display-prop-container {
   display: flex;
@@ -88,7 +88,7 @@
 }
 .overview-bottom-border {
   border-bottom: 1px solid lightgrey;
-  width: 20rem;
+  width: 100%;
   margin-bottom: 0rem;
   margin-top: 1rem;
 }
@@ -108,7 +108,7 @@
 .display-details-top {
   display: flex;
   justify-content: space-between;
-  width: 20rem;
+  /* width: 20rem; */
 }
 
 .display-details-subheader {
@@ -139,8 +139,8 @@
 }
 
 .display-property-img{
-  width: 29rem;
-  height: 29rem;
+  /* width: 29rem;
+  height: 29rem; */
 }
 
 @media only screen and (max-width: 780px) {
@@ -152,7 +152,7 @@
   }
 
   .display-property-img{
-    width: 31rem;
+    /* width: 31rem; */
   }
 }
 
