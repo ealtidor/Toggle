@@ -20,7 +20,7 @@
   padding: 1rem;
   margin-bottom: 5rem;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .display-header-font {
@@ -29,10 +29,8 @@
 
 .display-prop {
   background-color: white;
-    /* width: 56rem; */
-    margin: 1rem 5rem 5rem;
-    padding: 2rem 0rem;
-    /* height: 34rem; */
+  margin: 1rem 5rem 5rem;
+  padding: 2rem 0rem;
 }
 .display-prop-container {
   display: flex;
@@ -45,10 +43,9 @@
   margin-bottom: 5rem;
 }
 
-.edit-delete-container {
+.property-edit-delete-container {
   display: flex;
   justify-content: flex-end;
-  padding-left: 4 rem;
   margin-right: 6rem;
   align-items: center;
   margin-top: 2rem;
@@ -60,7 +57,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: .9rem;
+  font-size: 0.9rem;
   background-color: transparent;
   font-weight: 600;
   margin-left: 1rem;
@@ -71,7 +68,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-left: 1rem;
 }
@@ -79,6 +76,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0rem 2rem;
 }
 
 .display-overview-header {
@@ -108,7 +106,6 @@
 .display-details-top {
   display: flex;
   justify-content: space-between;
-  /* width: 20rem; */
 }
 
 .display-details-subheader {
@@ -119,6 +116,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-left: 6rem;
 }
 
 .display-rent {
@@ -127,20 +125,20 @@
   font-weight: 600;
 }
 
-.property-tenant-name{
+.property-tenant-name {
   text-decoration: none;
   color: rgb(251, 120, 40);
   font-weight: 500;
 }
 
-.property-display-subheader{
+.property-display-subheader {
   font-weight: 700;
   margin-bottom: 0rem;
 }
 
-.display-property-img{
-  /* width: 29rem;
-  height: 29rem; */
+.display-property-img {
+  max-width: 17rem;
+  padding-left: 2rem;
 }
 
 @media only screen and (max-width: 780px) {
@@ -151,16 +149,13 @@
     align-items: center;
   }
 
-  .display-property-img{
-    /* width: 31rem; */
+  .display-property-img {
+    max-width: 17rem;
   }
-}
-
-@media only screen and (max-width: 380px) {
-  
-
-  .display-header {
-    background-color: rgba(150, 150, 150, 0.7);
-  
+  .display-prop {
+    margin: 0rem 1rem 1rem;
   }
-}
+
+  .property-edit-delete-container {
+    margin: 0.5rem 1rem 0.5rem 0rem;
+  }
