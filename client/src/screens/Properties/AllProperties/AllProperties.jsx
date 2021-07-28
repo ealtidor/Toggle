@@ -39,16 +39,16 @@ export default function AllProperties(props) {
               <div className="white-container">
                 <div className='white-left'>
                 <div className="bed-container">
-                  <p>{property.beds}</p>
-                  <p>Beds</p>
+                  <p className='bed-bath-text'>{property.beds}</p>
+                  <p className='bed-bath-text'>Beds</p>
                 </div>
                 <div className="bath-container">
-                  <p>{property.bath}</p>
-                  <p>Baths</p>
+                  <p className='bed-bath-text'>{property.bath}</p>
+                  <p className='bed-bath-text'>Baths</p>
                 </div>
                 <div className="amenities-container">
-                  <p>Amenities:</p>
-                  <p>{property.amenities}</p>
+                  <p className='amenities-text'>Amenities:</p>
+                  <p className='amenities-text'>{property.amenities}</p>
                 </div>
                 </div>
                 <div className="tenant-container">

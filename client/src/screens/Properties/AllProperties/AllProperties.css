@@ -34,16 +34,15 @@ flex-direction: column;
   flex-direction: row; 
   box-shadow: 1px 2px 0px black;
   border: 1px solid black;
-  height: 19rem;
+  flex-wrap: wrap;
 }
 
 .orange-container {
   background-color: rgb(251, 120, 40);
   color: white;
   text-decoration: none;
-  width: 40rem;
   padding: 1rem;
-  height: 8rem;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -56,15 +55,14 @@ flex-direction: column;
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  padding: 3rem;
-  height: 3rem;
+  padding: 1rem 2rem;
+  height: 7rem;
   align-items: center;
-  width: 36rem;
 }
 
 .property-img {
-  width: 18.5rem;
-  height: 19rem;
+max-width: 17rem;
+width: 100%;
 }
 
 .prop-address-name {
@@ -102,18 +100,12 @@ flex-direction: column;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(200, 200, 200, 0.9);
   box-shadow: 1px 2px 0px black;
-  width: 58rem;
-  height: 12rem;
   font-weight: 700;
   font-size: 4rem;
   color: white;
   margin-bottom: 10rem;
-}
-
-.tenant-container{
-  width:9rem;
 }
 
 .createproperty{
@@ -122,10 +114,41 @@ flex-direction: column;
   text-decoration: none;
 }
 
-@media only screen and (max-width: 780px) {
+.amenities-text{
+  margin: 0.8rem 0rem;
+}
+
+.bed-bath-text{
+  margin: 0rem;
+}
+
+@media only screen and (max-width: 985px) {
   .orange-container {
     background-color: rgb(150, 150, 150);
+    height: 5rem;
   }
+  .property-container{
+    padding: 2rem 4rem;
+  }
+  .white-container{
+    font-size: .7rem;
+  }
+  .all-prop-name{
+    font-size: 1.5rem;
+  }
+  .property-rent{
+    font-size: 1rem;
+  }
+
+  .prop-address-name{
+    font-size: .7rem;
+  }
+
+  .prop-button{
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
 
 }
 

@@ -96,7 +96,7 @@ footer {
   width: 100%
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 985px) {
   .desktop-header{
   /* flex-direction: column; */
   padding-bottom: 1rem;
@@ -104,13 +104,16 @@ footer {
   /* display:none */
 }
 .layout-nav{
-  padding-left: 2rem;
-  width: 32rem;
-  display: flex;
-  flex-direction: column;
+justify-content: center;
 
 }
 
+.layout-header{
+ margin-left: 0rem;
+}
 
+.desktop-header {
+  margin-right: 0rem;
+}
 
 }
