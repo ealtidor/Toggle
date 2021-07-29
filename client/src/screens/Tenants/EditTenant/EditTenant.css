@@ -1,15 +1,13 @@
 .edit-tenant-details{
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 4rem 4rem;
   display: flex;
     flex-direction: column;
 }
 
 .tenant-edit-form{
   background-color: rgb(240, 240, 240);
-  padding: 2rem 4rem;
-  width: 25rem;
-  height: 39rem;
+  padding: 1rem 1rem 2rem 1rem; 
 }
 
 .tenant-edit-formcontainer{
@@ -31,4 +29,10 @@
     margin-left: 1rem;
     padding-bottom: 1rem;
     padding-left: 20rem;
+}
+
+@media only screen and (max-width: 530px){
+  .edit-screen-save{
+    padding-left: 17rem; 
+  }
 }
