@@ -11,7 +11,8 @@
 .tenant-column,
 .property-column{
   border: 1px solid black;
-    width: 20em;
+  width: 100%;
+    max-width: 20rem;
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -23,19 +24,17 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-evenly;
-  width: 55rem;
+  max-width: 44rem;
+  width: 100%;
 }
 
-.tenant-header,
-.property-header{
-  
-}
+
 .all-tenants-container{
   height: 100%;
 }
 
 .tenant-top-header{
-  width: 100%;
+  
   background-color: rgba(150, 150, 150, 0.7);
   color: white;
   font-weight: bold;
@@ -53,4 +52,11 @@
 }
 .header-text{
   text-decoration: underline;
+}
+
+.column-width{
+  width: 100%;
+  max-width: 10rem;
+  padding-left: 3rem;
+padding-right: 3rem;
 }
