@@ -30,8 +30,12 @@
 }
 .login-username {
   margin: 1rem;
+  display: flex;
+    flex-direction: column;
 }
 
 .login-password {
   margin-bottom: 1rem;
+  display: flex;
+    flex-direction: column;
 }
