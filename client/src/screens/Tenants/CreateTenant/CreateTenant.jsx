@@ -51,7 +51,7 @@ export default function CreateTenant(props) {
           handleTenantCreate(id, formData)
       }}
         >
-          <button className='create-screen-save'>SAVE</button>
+          <button className='create-tenant-screen-save'>SAVE</button>
           <div className='create-tenant-details'>
           <label
             className='create-tenant-label' >NAME:</label>

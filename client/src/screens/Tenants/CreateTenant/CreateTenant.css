@@ -1,38 +1,53 @@
-.tenant-create-form{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(240, 240, 240);
-  margin-top: 7rem;
-  padding: 8rem 7rem 13rem;
-  height: 46rem;
-}
-.tenant-create-formcontainer{
+.tenant-create-form {
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 7rem;
+  align-items: center;
+  justify-content: space-evenly;
   display: flex;
   justify-content: center;
-margin-top: 7rem;
-margin-bottom: 7rem;
-height: 53.5rem
-
+  flex-direction: column;
+  padding: 3rem 5rem 5rem;
+}
+.tenant-create-formcontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 
-.create-tenant-inputs{
-  width: 20rem;
+.create-tenant-inputs {
+  max-width: 20rem;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
-.create-tenant-label{
+.create-tenant-label {
   font-weight: 700;
 }
 
-.create-tenant-details{
+.create-tenant-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 35rem;
-  height: 35rem;
-  padding: 5rem 7rem 7rem;
-  background-color: white
+  padding: 2rem;
+  background-color: white;
+}
+.create-tenant-screen-save {
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: 600;
+  margin-left: 25rem;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 960px){
+  .create-tenant-screen-save {
+    margin-left: 17rem;
+  }
 }
