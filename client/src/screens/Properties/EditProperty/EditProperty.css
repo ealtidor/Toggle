@@ -1,14 +1,13 @@
 .edit-details-container {
   display: flex;
-  flex-direction: row;
   background-color: white;
-  padding: 4rem;
-  width: 64rem;
+  margin: 1rem 5rem 5rem;
+  padding: 1rem;
 }
 .edit-fields {
   display: flex;
   flex-direction: column;
-  padding-left: 3rem;
+  padding-left: 1rem;
   align-items: flex-start;
 }
 
@@ -19,13 +18,12 @@
 .edit-details-background {
   background-color: rgb(240, 240, 240);
   margin-bottom: 7rem;
-  padding: 4rem 7rem 7rem;
   align-items: center;
   justify-content: space-evenly;
-  width: 78rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 .edit-container-background {
@@ -35,11 +33,12 @@
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
+}
+.edit-holder {
   display: flex;
   justify-content: center;
 }
-
-.edit-screen-save{
+.edit-property-screen-save {
   border: none;
   color: black;
   text-align: center;
@@ -47,50 +46,44 @@
   display: inline-block;
   font-size: 16px;
   background-color: transparent;
-  font-weight: 600; 
-  margin-left: 1rem;
+  font-weight: 600;
+  margin-left: 36rem;
   padding-bottom: 1rem;
-    padding-left: 57rem;
 }
-.edit-img-field{
+.edit-img-field {
   padding-top: 1rem;
+  margin-left: 0.8rem;
 }
 
-.edit-input-fields{
-  width: 20rem
+.edit-input-fields {
+  margin-bottom: 1rem;
+  max-width: 13rem;
+  width: 100%;
 }
 
-.edit-label-fields{
-  font-weight: 700;
+.edit-label-fields {
+  font-weight: 600;
 }
 
-@media only screen and (max-width: 780px) {
-  .edit-details-container  {
+.edit-property-image {
+  width: 100%;
+  max-width: 17rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .edit-details-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 1rem 2rem 2rem;
   }
 
-  .display-property-img{
-    width: 31rem;
+  .edit-img-field {
+    display: flex;
+    flex-direction: column;
   }
-.edit-img-field{
-  margin-bottom: 1rem;
-}
-.edit-container-background{
-  height: 134rem;
-}
-  
-}
-
-@media only screen and (max-width: 380px) {
-  .edit-details-background {
-    background-color: black;
-    
-  }
-
-  .edit-screen-save{
-    color: white;
+  .edit-property-screen-save {
+    margin-left: 17rem;
   }
 }

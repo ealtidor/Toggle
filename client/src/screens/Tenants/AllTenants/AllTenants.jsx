@@ -19,13 +19,13 @@ export default function AllTenants(props) {
           <div className="tenant-list" key={tenant.id}>
               <div className="table-container">
                 <div className="tenant-column">
-            <Link to={`/tenants/${tenant.id}`}>
-                  <h5>{tenant.name}</h5>
+            <Link  to={`/tenants/${tenant.id}`}>
+                  <h5 className='column-width'>{tenant.name}</h5>
             </Link>
                 </div>
               <div className='property-column'>
                 <Link to={`/properties/${tenant.property.id}`}>
-              <h5>{tenant.property.name}</h5>
+              <h5 className='column-width'>{tenant.property.name}</h5>
                 </Link>
                 </div>
               </div>
