@@ -15,9 +15,8 @@ export default function EditProperty(props) {
     next_maintenance: "",
     amenities: "",
     img_url: "",
-    tenants_attributes: [{ name: '' }]
+    tenants_attributes: [{ name: "" }],
   });
-  
 
   const {
     name,
@@ -33,7 +32,7 @@ export default function EditProperty(props) {
     img_url,
   } = formData;
 
-  const { properties, handleUpdate} = props;
+  const { properties, handleUpdate } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -69,139 +68,122 @@ export default function EditProperty(props) {
     }));
   };
 
-  
-
   return (
     <div className="edit-container-background">
-      <div className='edit-holder'>
-    <form
-      className="edit-container"
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleUpdate(id, formData);
-      }}
-    >
-          <div className='edit-details-background'>
-          <button className='edit-screen-save'>SAVE</button>
-      <div className="edit-details-container">
-        <div className="edit-img-container">
-          <img className="edit-property-image" src={img_url} alt={name} />
-          <div className="edit-img-field">
-            <label htmlFor="img_url">PASTE IMAGE URL:</label>
-            <input
-              type="text"
-              name="img_url"
-              value={img_url}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
+      <div className="edit-holder">
+        <form
+          className="edit-container"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleUpdate(id, formData);
+          }}
+        >
+          <div className="edit-details-background">
+            <button className="edit-property-screen-save">SAVE</button>
+            <div className="edit-details-container">
+              <div className="edit-img-container">
+                <img className="edit-property-image" src={img_url} alt={name} />
+                <div className="edit-img-field">
+                  <label className="edit-label-fields" htmlFor="img_url">
+                    PASTE IMAGE URL:
+                  </label>
+                  <input
+                    className="edit-input-fields"
+                    type="text"
+                    name="img_url"
+                    value={img_url}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
               <div className="edit-fields">
-                <label
-                className='edit-label-fields'>
-                  PROPERTY NAME
-          </label>
+                <label className="edit-label-fields">PROPERTY NAME</label>
                 <input
-                  className='edit-input-fields'
-        placeholder="PROPERTY NAME"
-        type="text"
-        name="name"
-        value={name}
-        onChange={handleChange}
-          />
-          <label className='edit-label-fields'>
-            MONTHLY RENT
-          </label>
+                  className="edit-input-fields"
+                  placeholder="PROPERTY NAME"
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">MONTHLY RENT</label>
                 <input
-                  className='edit-input-fields'
-              type="integer"
-              name="rent"
-              value={rent}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            # OF BEDS
-          </label>
+                  className="edit-input-fields"
+                  type="integer"
+                  name="rent"
+                  value={rent}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields"># OF BEDS</label>
                 <input
-                  className='edit-input-fields'
-              type="integer"
-              name="beds"
-              value={beds}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            # OF BATHS
-          </label>
-            <input
-            className='edit-input-fields'
-              type="integer"
-              name="bath"
-              value={bath}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            SQ. FT.
-          </label >
-            <input
-              type="integer"
-              name="sq_ft"
-              value={sq_ft}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            ADDRESS
-          </label>
+                  className="edit-input-fields"
+                  type="integer"
+                  name="beds"
+                  value={beds}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields"># OF BATHS</label>
                 <input
-                  className='edit-input-fields'
-              type="text"
-              name="address"
-              value={address}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            CURRENT TENANT
-          </label>
-            <input
-              type="text"
-              name="current_tenant"
-              value={current_tenant}
-              onChange={handleChange}
-            />
+                  className="edit-input-fields"
+                  type="integer"
+                  name="bath"
+                  value={bath}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">SQ. FT.</label>
+                <input
+                  type="integer"
+                  name="sq_ft"
+                  value={sq_ft}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">ADDRESS</label>
+                <input
+                  className="edit-input-fields"
+                  type="text"
+                  name="address"
+                  value={address}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">CURRENT TENANT</label>
+                <input
+                  className="edit-input-fields"
+                  type="text"
+                  name="current_tenant"
+                  value={current_tenant}
+                  onChange={handleChange}
+                />
 
-          <label className='edit-label-fields'>
-            RENTAL AGREEMENT
-          </label>
+                <label className="edit-label-fields">RENTAL AGREEMENT</label>
                 <input
-                  className='edit-input-fields'
-              type="text"
-              name="rental_agreement"
-              value={rental_agreement}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            NEXT SCHEDULED MAINTENANCE
-          </label>
+                  className="edit-input-fields"
+                  type="text"
+                  name="rental_agreement"
+                  value={rental_agreement}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">
+                  NEXT SCHEDULED MAINTENANCE
+                </label>
                 <input
-                  className='edit-input-fields'
-              type="text"
-              name="next_maintenance"
-              value={next_maintenance}
-              onChange={handleChange}
-            />
-          <label className='edit-label-fields'>
-            AMENITIES
-          </label>
+                  className="edit-input-fields"
+                  type="text"
+                  name="next_maintenance"
+                  value={next_maintenance}
+                  onChange={handleChange}
+                />
+                <label className="edit-label-fields">AMENITIES</label>
                 <input
-                  className='edit-input-fields'
-              type="text"
-              name="amenities"
-              value={amenities}
-              onChange={handleChange}
-            />
-        </div>
-      </div>
+                  className="edit-input-fields"
+                  type="text"
+                  name="amenities"
+                  value={amenities}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
           </div>
-    </form>
+        </form>
       </div>
     </div>
   );
