@@ -1,65 +1,68 @@
-.tenant-display-header{
+.tenant-display-header {
   display: flex;
   flex-direction: row;
   background-color: rgba(150, 150, 150, 0.5);
   color: black;
-  font-weight: bold;
   text-align: left;
   padding: 1rem;
   margin-bottom: 5rem;
   font-weight: 900;
 }
 
-.display-property{
+.display-property {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-left: 2rem;
 }
 
-.tenant-property-name{
-margin-bottom: 0rem;
-}
-
-.tenant-property-address{
-  margin-top: 0rem;
-}
-
-.address-details{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 0rem;
-}
-
-.previous-address{
+.tenant-property-name {
   margin-bottom: 0rem;
 }
-.display-tenant-details{
-  background-color: rgb(240, 240, 240);
-  padding: 4rem;
 
+.tenant-property-address {
+  margin-top: 0rem;
 }
-.subdisplay-tenant-details{
+
+.previous-address {
+  margin-bottom: 0rem;
+}
+.display-tenant-details {
+  background-color: rgb(240, 240, 240);
+  padding: 2rem 4rem 4rem;
+}
+.subdisplay-tenant-details {
   background-color: white;
   padding: 2rem;
   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.topdisplay-tenant-details{
+.topdisplay-tenant-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
   margin: 5rem;
 }
-.display-tenant-container{
-  height: 67.5rem;
+
+.edit-tenant-subheader {
+  margin-bottom: 0rem;
+  font-weight: 700;
 }
 
-.edit-tenant-subheader{
-margin-bottom: 0rem;
-font-weight: 700;
+.edit-delete-container {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 380px) {
+  .tenant-display-header {
+    flex-direction: column;
+    padding: 0rem 1rem;
+    font-size: 0.8rem;
+  }
+  .tenant-name {
+    margin-bottom: 0rem;
+  }
 }

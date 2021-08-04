@@ -1,0 +1,38 @@
+.edit-tenant-details{
+  background-color: white;
+  padding: 2rem 4rem 4rem;
+  display: flex;
+    flex-direction: column;
+}
+
+.tenant-edit-form{
+  background-color: rgb(240, 240, 240);
+  padding: 1rem 1rem 2rem 1rem; 
+}
+
+.tenant-edit-formcontainer{
+  display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.edit-screen-save{
+  border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: transparent;
+    font-weight: 600;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 20rem;
+}
+
+@media only screen and (max-width: 530px){
+  .edit-screen-save{
+    padding-left: 17rem; 
+  }
+}

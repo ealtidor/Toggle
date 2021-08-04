@@ -14,6 +14,7 @@ export default function CreateTenant(props) {
     primary_number: '',
     alt_number: '',
     preferred_contact: '',
+    zip_code:'',
   })
   
   const {
@@ -23,6 +24,7 @@ export default function CreateTenant(props) {
     state,
     zip_code,
     email,
+    zip_code,
     primary_number,
     alt_number,
     preferred_contact,
@@ -44,7 +46,6 @@ export default function CreateTenant(props) {
   return (
     <div >
       <div className='tenant-create-formcontainer'>
-
       <form
         className='tenant-create-form'
         onSubmit={(e) => {
@@ -52,7 +53,7 @@ export default function CreateTenant(props) {
           handleTenantCreate(id, formData)
       }}
         >
-          <button className='create-screen-save'>SAVE</button>
+          <button className='create-tenant-screen-save'>SAVE</button>
           <div className='create-tenant-details'>
           <label
             className='create-tenant-label' >NAME:</label>

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export default function AllProperties(props) {
   const { properties } = props;
 
+  
+
   return (
     <div className="allprops-container">
       <div className="all-property-header">
@@ -23,35 +25,25 @@ export default function AllProperties(props) {
                   alt="Property"
                 />
               </div>
-              <div className="all-property-details">
-                <div className="orange-container">
-                  <div className="property-rent">
-                    <p>${property.rent}</p>
-                  </div>
-                  <div className="prop-address-name">
-                    <h3 className="all-prop-name">{property.name}</h3>
-                    <p>{property.address}</p>
-                  </div>
+              <div className="white-container">
+                <div className='white-left'>
+                <div className="bed-container">
+                  <p className='bed-bath-text'>{property.beds}</p>
+                  <p className='bed-bath-text'>Beds</p>
                 </div>
-                <div className="white-container">
-                  <div className="white-left">
-                    <div className="bed-container">
-                      <p>{property.beds}</p>
-                      <p>Beds</p>
-                    </div>
-                    <div className="bath-container">
-                      <p>{property.bath}</p>
-                      <p>Baths</p>
-                    </div>
-                    <div className="amenities-container">
-                      <p>Amenities:</p>
-                      <p>{property.amenities}</p>
-                    </div>
-                  </div>
-                  <div className="tenant-container">
-                    <p>Tenant:</p>
+                <div className="bath-container">
+                  <p className='bed-bath-text'>{property.bath}</p>
+                  <p className='bed-bath-text'>Baths</p>
+                </div>
+                <div className="amenities-container">
+                  <p className='amenities-text'>Amenities:</p>
+                  <p className='amenities-text'>{property.amenities}</p>
+                </div>
+                </div>
+                <div className="tenant-container">
+                  <p>Tenant:</p>
                     {property.tenants?.map((tenant) => (
-                      <p key={`${tenant.id}-${Math.random()}`}>{tenant.name}</p>
+                      <p key={`${tenant.id}-${Math.random()}`}>{ tenant.name}</p>
                     ))}
                   </div>
                 </div>

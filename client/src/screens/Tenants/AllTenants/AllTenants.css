@@ -11,7 +11,8 @@
 .tenant-column,
 .property-column{
   border: 1px solid black;
-    width: 20em;
+  width: 100%;
+    max-width: 20rem;
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -22,21 +23,18 @@
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  max-width: 44rem;
+  width: 100%;
 }
 
-.tenant-header,
-.property-header{
-  border: 1px solid black;
-  width: 20em; 
-  height: 2rem; 
-  padding: 2rem;
-}
+
 .all-tenants-container{
   height: 100%;
 }
 
 .tenant-top-header{
+  
   background-color: rgba(150, 150, 150, 0.7);
   color: white;
   font-weight: bold;
@@ -46,5 +44,19 @@
   font-weight: 700;
 }
 .tenants-container{
-  height: 58rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+.header-text{
+  text-decoration: underline;
+}
+
+.column-width{
+  width: 100%;
+  max-width: 10rem;
+  padding-left: 3rem;
+padding-right: 3rem;
 }

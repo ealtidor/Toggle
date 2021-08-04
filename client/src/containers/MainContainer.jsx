@@ -8,6 +8,7 @@ import EditProperty from "../screens/Properties/EditProperty/EditProperty";
 import AllTenants from "../screens/Tenants/AllTenants/AllTenants";
 import DisplayTenant from "../screens/Tenants/DisplayTenant/DisplayTenant";
 import CreateTenant from "../screens/Tenants/CreateTenant/CreateTenant";
+import EditTenant from "../screens/Tenants/EditTenant/EditTenant";
 
 // Services
 import {
@@ -16,7 +17,7 @@ import {
   postProperty,
   putProperty,
 } from "../services/property";
-import { getAllTenants, postTenant} from "../services/tenant";
+import { getAllTenants, postTenant, putTenant, deleteTenant } from "../services/tenant";
 
 export default function MainContainer() {
   const [properties, setProperties] = useState([]);
@@ -31,7 +32,7 @@ export default function MainContainer() {
       setProperties(propertyList);
     };
     fetchProperties();
-  }, []);
+  }, [tenants]);
 
   // Get All Tenants
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function MainContainer() {
   const handleTenantCreate = async (id, formData) => {
     const tenantItem = await postTenant(id, formData);
     setTenants((prevState) => [...prevState, tenantItem]);
-    history.push(`/properties/${id}`)
+    history.push(`/properties/${id}`);
   };
 
   // Update Property
@@ -67,6 +68,17 @@ export default function MainContainer() {
     history.push(`/properties/${id}`);
   };
 
+  // Update Tenant
+  const handleTenantUpdate = async (id, formData) => {
+    const tenantItem = await putTenant(id, formData);
+    setTenants((prevState) =>
+      prevState.map((tenant) => {
+        return tenant.id === Number(id) ? tenantItem : tenant;
+      })
+    );
+    history.push(`/tenants/${id}`);
+  };
+
   // Delete Property
   const handleDelete = async (id) => {
     await deleteProperty(id);
@@ -76,17 +88,35 @@ export default function MainContainer() {
     history.push("/properties");
   };
 
+  // Delete Tenant
+  const handleTenantDelete = async (id) => {
+    await deleteTenant(id);
+    setTenants((prevState) =>
+      prevState.filter((tenant) => tenant.id !== id)
+    );
+    history.push("/tenants");
+  };
+
   return (
     <div>
       <Switch>
         <Route path="/properties/:id/tenants/new">
           <CreateTenant handleTenantCreate={handleTenantCreate} />
         </Route>
+        <Route path="/tenants/:id/edit">
+          <EditTenant
+            tenants={tenants}
+            handleTenantUpdate={handleTenantUpdate}
+          />
+        </Route>
         <Route path="/properties/:id/edit">
           <EditProperty properties={properties} handleUpdate={handleUpdate} />
         </Route>
         <Route path="/properties/new">
-          <CreateProperty handleCreate={handleCreate} />
+          <CreateProperty
+            handleCreate={handleCreate}
+            handleTenantCreate={handleTenantCreate}
+          />
         </Route>
         <Route path="/properties/:id">
           <DisplayProperty
@@ -96,10 +126,14 @@ export default function MainContainer() {
           />
         </Route>
         <Route path="/properties">
-          <AllProperties properties={properties} />
+          <AllProperties
+            properties={properties}
+            handleCreate={handleCreate}
+            tenants={tenants}
+          />
         </Route>
         <Route path="/tenants/:id">
-          <DisplayTenant handleDelete={handleDelete} />
+          <DisplayTenant handleTenantDelete={handleTenantDelete} />
         </Route>
         <Route path="/tenants">
           <AllTenants tenants={tenants} />

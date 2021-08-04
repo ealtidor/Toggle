@@ -1,9 +1,18 @@
+#root{
+  width: 100%;
 
+}
+
+footer{
+  padding-left: 3rem;
+  background-color: blue;
+}
 
 @media only screen and (max-width: 780px) {
 
   .App {
     display: flex;
+    flex-direction: column;
   }
 
 }

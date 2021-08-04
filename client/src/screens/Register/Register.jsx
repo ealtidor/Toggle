@@ -19,11 +19,12 @@ export default function Register(props) {
     }));
   };
   return (
+    <div className='background-container'>
     <div className="register-form-container">
       <div className="register-quotes">
         <h4 className='quote'>MANAGE COMMUNICATIONS.</h4>
         <h4 className='quote'>SAVE TIME AND MONEY.</h4>
-        <h4>ACCESS YOUR PROPERTIES FROM</h4>
+        <h4 className='quote'>ACCESS YOUR PROPERTIES FROM</h4>
         <h4 className='anywhere'>ANYWHERE.</h4>
       </div>
       <div className="register-form-border">
@@ -71,6 +72,8 @@ export default function Register(props) {
           <button className="register-button">SUBMIT</button>
         </form>
       </div>
+    
+    </div>
     </div>
   );
 }

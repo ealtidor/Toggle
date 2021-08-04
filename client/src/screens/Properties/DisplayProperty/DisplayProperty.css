@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 .display-prop-background {
   background: url(https://images.unsplash.com/photo-1524813686514-a57563d77965?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmVpZ2hib3Job29kfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)
@@ -19,6 +20,7 @@
   padding: 1rem;
   margin-bottom: 5rem;
   font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .display-header-font {
@@ -27,13 +29,13 @@
 
 .display-prop {
   background-color: white;
-  width: 64rem;
   margin: 1rem 5rem 5rem;
-  padding: 4rem;
+  padding: 2rem 0rem;
 }
 .display-prop-container {
   display: flex;
   justify-content: center;
+  font-size: 0.9rem;
 }
 
 .display-grey-background {
@@ -41,10 +43,9 @@
   margin-bottom: 5rem;
 }
 
-.edit-delete-container {
+.property-edit-delete-container {
   display: flex;
   justify-content: flex-end;
-  padding-left: 4 rem;
   margin-right: 6rem;
   align-items: center;
   margin-top: 2rem;
@@ -56,7 +57,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 0.9rem;
   background-color: transparent;
   font-weight: 600;
   margin-left: 1rem;
@@ -67,13 +68,15 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 600;
+  margin-left: 1rem;
 }
 .display-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0rem 2rem;
 }
 
 .display-overview-header {
@@ -83,7 +86,7 @@
 }
 .overview-bottom-border {
   border-bottom: 1px solid lightgrey;
-  width: 20rem;
+  width: 100%;
   margin-bottom: 0rem;
   margin-top: 1rem;
 }
@@ -103,7 +106,6 @@
 .display-details-top {
   display: flex;
   justify-content: space-between;
-  width: 20rem;
 }
 
 .display-details-subheader {
@@ -114,6 +116,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-left: 6rem;
 }
 
 .display-rent {
@@ -122,15 +125,20 @@
   font-weight: 600;
 }
 
-.property-tenant-name{
+.property-tenant-name {
   text-decoration: none;
   color: rgb(251, 120, 40);
   font-weight: 500;
 }
 
-.property-display-subheader{
+.property-display-subheader {
   font-weight: 700;
   margin-bottom: 0rem;
+}
+
+.display-property-img {
+  max-width: 17rem;
+  padding-left: 2rem;
 }
 
 @media only screen and (max-width: 780px) {
@@ -141,16 +149,14 @@
     align-items: center;
   }
 
-  .display-property-img{
-    width: 31rem;
+  .display-property-img {
+    max-width: 17rem;
   }
-}
+  .display-prop {
+    margin: 0rem 1rem 1rem;
+  }
 
-@media only screen and (max-width: 380px) {
-  
-
-  .display-header {
-    background-color: rgba(150, 150, 150, 0.7);
-  
+  .property-edit-delete-container {
+    margin: 0.5rem 1rem 0.5rem 0rem;
   }
 }

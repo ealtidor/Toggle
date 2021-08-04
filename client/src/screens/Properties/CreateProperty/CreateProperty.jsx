@@ -1,5 +1,7 @@
 import "./CreateProperty.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 export default function CreateProperty(props) {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,6 +29,8 @@ export default function CreateProperty(props) {
     img_url,
   } = formData;
   const { handleCreate } = props;
+
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -117,6 +121,7 @@ export default function CreateProperty(props) {
                   value={address}
                   onChange={handleChange}
                 />
+                
                 <label className="create-label-fields">RENTAL AGREEMENT</label>
                 <input
                   className="create-input-fields"
