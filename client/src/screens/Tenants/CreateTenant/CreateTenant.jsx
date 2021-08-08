@@ -24,7 +24,6 @@ export default function CreateTenant(props) {
     state,
     zip_code,
     email,
-    zip_code,
     primary_number,
     alt_number,
     preferred_contact,

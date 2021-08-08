@@ -1,16 +1,27 @@
 import "./Register.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import {register}from '../../redux/userReducer'
+import { registerUser } from "../../services/auth";
+import faker from 'faker'
 
-export default function Register(props) {
+
+export default function Register() {
   const [formData, setFormData] = useState({
-    name: "",
-    username: "",
-    email: "",
-    password: "",
+    name: faker.name.firstName(),
+    username: faker.name.firstName(),
+    email: faker.internet.email(),
+    password: 'touchdown',
   });
   const { name, username, email, password } = formData;
-  const { handleRegister } = props;
+  // Redux 
+  async function handleRegister()
+  {
+    const userData = await registerUser(formData);
+    register(userData)
+    // history.push("/properties");
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -18,6 +29,10 @@ export default function Register(props) {
       [name]: value,
     }));
   };
+
+  const user = useSelector((state) => {
+    console.log(state)
+  })
   return (
     <div className='background-container'>
     <div className="register-form-container">
